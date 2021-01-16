@@ -1,6 +1,6 @@
 # Automatically generate caption videos from .srt files
 
-Requires `ffmpeg` to be installed and on the path.
+Requires `ffmpeg` to be installed and on the path. (On macOS, `brew install ffmpeg` should do it)
 
 1. Add .srt files to `data/` subdirectory
 2. Run `make`
