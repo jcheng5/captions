@@ -6,11 +6,18 @@ library(lubridate)
 source("_parse.R")
 source("_frame.R")
 
-generate_video <- function(srt_file, duration = "00:00", overwrite = TRUE) {
-  output_file <- paste0(tools::file_path_sans_ext(srt_file), ".ogv")
-  if (!overwrite && file.exists(output_file)) {
-    message(output_file, " exists, skipping")
-    return()
+generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
+  output_file <- paste0(tools::file_path_sans_ext(srt_file), ".mp4")
+  if (file.exists(output_file)) {
+    if (isFALSE(overwrite)) {
+      return(FALSE)
+    } else if (overwrite == "auto") {
+      srt_mtime <- file.info(srt_file)$mtime
+      out_mtime <- file.info(output_file)$mtime
+      if (out_mtime >= srt_mtime) {
+        return(FALSE)
+      }
+    }
   }
 
   df <- read_srt(srt_file)
@@ -30,18 +37,20 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = TRUE) {
   unlink(frames_dir, recursive = TRUE)
   dir.create(frames_dir)
 
+  message("  Generating frames")
   text_to_frame("", file.path(captions_dir, "blank.png"))
-  pb <- progress_bar$new(total = nrow(df))
+  # pb <- progress_bar$new(total = nrow(df))
   for (i in seq_len(nrow(df))) {
-    pb$tick()
+    # pb$tick()
     text_to_frame(df$text[i], file.path(captions_dir, paste0(df$n[i], ".png")))
   }
 
   fps <- 24
 
-  pb <- progress_bar$new(total = duration)
+  message("  Linking")
+  # pb <- progress_bar$new(total = duration)
   for (sec in 0:(duration - 1)) {
-    pb$tick()
+    # pb$tick()
     for (frame in 0:(fps - 1)) {
       abs_frame <- sec * fps + frame
       secs <- abs_frame / fps
@@ -59,16 +68,45 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = TRUE) {
     }
   }
 
-  system(paste0("ffmpeg -y -r 24 -s 1920x360 -i ",
-    shQuote(file.path(frames_dir, "frame%08d.png"), "sh"), " ",
-  #   "-vcodec libx264 -crf 25 -pix_fmt yuv420p ",
-    "-c:v libtheora -qscale:v 7 ",
-    shQuote(output_file, "sh")))
-  message("Wrote ", output_file)
+  message("  Rendering")
+  tryCatch({
+    # system(paste0("ffmpeg -hide_banner -loglevel warning -nostats ",
+    #   " -y -r 24 -s 1920x360 -i ",
+    #   shQuote(file.path(frames_dir, "frame%08d.png"), "sh"), " ",
+    #   "-vcodec libx264 -crf 25 -pix_fmt yuv420p ",
+    #   shQuote(output_file, "sh")))
+    res <- processx::run("ffmpeg", c(
+      "-hide_banner",
+      "-loglevel", "warning",
+      "-nostats",
+      "-y",
+      "-r", "24",
+      "-s", "1920x360",
+      "-i", file.path(frames_dir, "frame%08d.png"),
+      "-vcodec", "libx264",
+      "-crf", "25",
+      "-pix_fmt", "yuv420p",
+      output_file
+    ), echo_cmd = FALSE, echo = TRUE)
+    if (!identical(res$status, 0)) {
+      unlink(output_file)
+      stop("Rendering failed!")
+    }
+    message("Wrote ", output_file)
+  }, interrupt = function(e) {
+    message("Interrupted, deleting output")
+    unlink(output_file)
+    stop(e)
+  }, error = function(e) {
+    message("Errored, deleting output")
+    unlink(output_file)
+    stop(e)
+  })
 
   unlink(captions_dir, recursive = TRUE)
   unlink(frames_dir, recursive = TRUE)
-  invisible()
+
+  invisible(TRUE)
 }
 
 # args <- commandArgs(TRUE)

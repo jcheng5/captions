@@ -1,0 +1,1929 @@
+﻿1
+00:00:00,000 --> 00:00:01,016
+Lecciones de Arte
+
+2
+00:00:01,016 --> 00:00:05,225
+de un año como Artista
+en Residencia de RStudio
+
+3
+00:00:05,225 --> 00:00:06,760
+Hola a todos.
+
+4
+00:00:06,760 --> 00:00:08,010
+Soy Allison Horst.
+
+5
+00:00:08,010 --> 00:00:10,080
+Soy una profesora asistente
+de enseñanza en la Facultad
+
+6
+00:00:10,080 --> 00:00:11,820
+de Bren de la Universidad de
+California en Santa Bárbara.
+
+7
+00:00:11,820 --> 00:00:13,380
+Y durante el último año, también he
+
+8
+00:00:13,380 --> 00:00:15,840
+ha sido el artista en
+residencia de RStudio.
+
+9
+00:00:15,840 --> 00:00:18,030
+En esta charla, estoy muy
+emocionada de compartir con
+
+10
+00:00:18,030 --> 00:00:19,588
+ustedes algunas de las
+motivaciones detrás de mi trabajo
+
+11
+00:00:19,588 --> 00:00:21,720
+artístico de R y también
+algunas lecciones que
+
+12
+00:00:21,720 --> 00:00:25,400
+he aprendido de la comunidad
+R a lo largo del camino.
+
+13
+00:00:25,400 --> 00:00:28,088
+Para empezar, quiero pedirte
+
+14
+00:00:28,088 --> 00:00:31,460
+reflexionar sobre lo que
+sentiste la primera vez que te
+
+15
+00:00:31,460 --> 00:00:35,107
+comenzó a aprender R.
+
+16
+00:00:35,107 --> 00:00:37,740
+Tal vez usted es uno de los afortunados
+
+17
+00:00:37,740 --> 00:00:39,870
+que lo único que sintió
+fue felicidad y emoción
+
+18
+00:00:39,870 --> 00:00:42,578
+y creías que esto iba a ser
+una herramienta increíble
+
+19
+00:00:42,578 --> 00:00:44,250
+para aprender.
+
+20
+00:00:44,250 --> 00:00:46,380
+Pero para muchas personas
+que están aprendiendo
+
+21
+00:00:46,380 --> 00:00:51,060
+R o código por primera
+vez, no tuvo esa reacción.
+
+22
+00:00:51,060 --> 00:00:53,880
+Puede haber alguna confusión en la idea
+
+23
+00:00:53,880 --> 00:00:56,170
+de aprender este nuevo lenguaje.
+
+24
+00:00:56,170 --> 00:00:58,530
+Puede haber alguna frustración,
+tal vez usted ya están
+
+25
+00:00:58,530 --> 00:01:01,140
+trabajando felizmente en otro idioma,
+
+26
+00:01:01,140 --> 00:01:04,620
+y está mirando a R y
+pensando, ¿qué es el kakapo?
+
+27
+00:01:04,620 --> 00:01:07,380
+Quiero que me devuelvan mis pandas.
+
+28
+00:01:07,380 --> 00:01:10,680
+Tal vez te sientes frustrado
+mientras intentas levantarte
+
+29
+00:01:10,680 --> 00:01:12,900
+en esta empinada curva de aprendizaje.
+
+30
+00:01:12,900 --> 00:01:14,820
+O tal vez ni siquiera esperabas
+
+31
+00:01:14,820 --> 00:01:17,100
+tener que aprender a codificar,
+
+32
+00:01:17,100 --> 00:01:20,010
+y miras a R sufriendo un colapso porque
+
+33
+00:01:20,010 --> 00:01:22,590
+es algo que es completamente nuevo.
+
+34
+00:01:22,590 --> 00:01:25,920
+Y todos estos sentimientos
+son bastante comunes para los
+
+35
+00:01:25,920 --> 00:01:29,790
+estudiantes y esto no es
+exclusivo de R. Una reciente
+
+36
+00:01:29,790 --> 00:01:32,130
+búsqueda en Google de
+por qué está codificando
+
+37
+00:01:32,130 --> 00:01:34,438
+así que punto, punto, punto
+revela que muchas de las
+
+38
+00:01:34,438 --> 00:01:36,833
+principales búsquedas
+relacionadas con el por qué está
+
+39
+00:01:36,833 --> 00:01:38,880
+codificando así no son
+totalmente positivos.
+
+40
+00:01:38,880 --> 00:01:41,640
+¿Por qué es tan difícil,
+aburrido y complicado codificar,
+
+41
+00:01:41,640 --> 00:01:43,680
+frustrante, difícil, difícil de aprender,
+
+42
+00:01:43,680 --> 00:01:45,613
+confuso y estresante?
+
+43
+00:01:45,613 --> 00:01:48,600
+Y sí, combinado aquí hay
+algunos buenos como, ¿por qué
+
+44
+00:01:48,600 --> 00:01:50,160
+es la codificación tan importante?
+
+45
+00:01:50,160 --> 00:01:52,110
+¿Y por qué es tan divertido?
+
+46
+00:01:52,110 --> 00:01:55,320
+Eso podría ser un artefacto
+de que esto sea parte de mi
+
+47
+00:01:55,320 --> 00:01:56,730
+resultado de búsqueda.
+
+48
+00:01:56,730 --> 00:02:00,030
+Pero la conclusión general es
+que para muchos estudiantes,
+
+49
+00:02:00,030 --> 00:02:02,070
+R y aprender a codificar en general
+
+50
+00:02:02,070 --> 00:02:04,486
+puede sentirse un poco intimidante
+
+51
+00:02:04,486 --> 00:02:08,320
+y tal vez no como un
+lugar totalmente feliz.
+
+52
+00:02:08,320 --> 00:02:12,030
+Y no sólo se puede sentir un
+poco intimidante, sin embargo,
+
+53
+00:02:12,030 --> 00:02:15,390
+también es una gran inversión
+de energía y tiempo.
+
+54
+00:02:15,390 --> 00:02:17,370
+Hay tantas cosas que aprender
+
+55
+00:02:17,370 --> 00:02:20,260
+para empezar en R y con la
+codificación en general,
+
+56
+00:02:20,260 --> 00:02:22,733
+y siempre hay algo nuevo que sale.
+
+57
+00:02:22,733 --> 00:02:24,083
+Para aquellos de nosotros
+que estamos felizmente
+
+58
+00:02:24,083 --> 00:02:25,620
+trabajando en R...
+
+59
+00:02:25,620 --> 00:02:28,770
+tal vez somos este monstruo
+verde a la derecha donde
+
+60
+00:02:28,770 --> 00:02:31,953
+vemos nuevos tutoriales y
+nuevos recursos o paquetes
+
+61
+00:02:31,953 --> 00:02:34,420
+saliendo todos los días, y estamos tan
+
+62
+00:02:34,420 --> 00:02:38,145
+emocionado sabiendo que puede
+ser algo útil para nosotros
+
+63
+00:02:38,145 --> 00:02:39,600
+para aprender y usar.
+
+64
+00:02:39,600 --> 00:02:42,090
+Pero podemos imaginar que para
+los estudiantes, que están
+
+65
+00:02:42,090 --> 00:02:45,085
+sólo tratando de subir esta
+empinada curva de aprendizaje,
+
+66
+00:02:45,085 --> 00:02:47,160
+viendo todas esas cosas
+nuevas que salen todas
+
+67
+00:02:47,160 --> 00:02:50,900
+el tiempo podría ser un poco desalentador.
+
+68
+00:02:50,900 --> 00:02:54,400
+Entonces, ¿qué podemos hacer
+cuando algo es difícil de
+
+69
+00:02:54,400 --> 00:02:58,210
+aprender y le pedimos a un
+aprendiz que haga una inversión?
+
+70
+00:02:58,210 --> 00:03:00,100
+Una cosa que podemos hacer es que podemos
+
+71
+00:03:00,100 --> 00:03:01,930
+poner un poco de trabajo extra
+
+72
+00:03:01,930 --> 00:03:04,480
+para ayudar a algo que originalmente
+
+73
+00:03:04,480 --> 00:03:06,721
+no parece que se sienta un poco
+
+74
+00:03:06,721 --> 00:03:08,479
+más apetitoso...
+
+75
+00:03:09,370 --> 00:03:12,340
+Por ejemplo, si sabemos
+que las verduras contienen
+
+76
+00:03:12,340 --> 00:03:14,680
+un montón de nutrientes
+realmente buenos, pero es
+
+77
+00:03:14,680 --> 00:03:16,630
+difícil de convencer a
+alguien de que se las coma,
+
+78
+00:03:16,630 --> 00:03:19,720
+tal vez podamos disfrazarlo
+para que parezca algo
+
+79
+00:03:19,720 --> 00:03:21,850
+interesante para aumentar la
+probabilidad de que inviertan
+
+80
+00:03:21,850 --> 00:03:24,360
+en comer esas verduras.
+
+81
+00:03:24,360 --> 00:03:27,480
+Y la gente ya está
+haciendo esto en código.
+
+82
+00:03:27,480 --> 00:03:30,840
+Por ejemplo, las revistas
+de Julia Evans que
+
+83
+00:03:30,840 --> 00:03:34,830
+explicó un montón de fundamentos
+realmente importantes en el
+
+84
+00:03:34,830 --> 00:03:39,030
+CSS y Git, y bash son herramientas
+de enseñanza muy útiles
+
+85
+00:03:39,030 --> 00:03:42,390
+porque proporcionan información
+para los estudiantes,
+
+86
+00:03:42,390 --> 00:03:45,000
+pero también hacen que
+parezca muy acogedor.
+
+87
+00:03:45,000 --> 00:03:49,500
+Esto parece algo con lo que
+me gustaría comprometerme.
+
+88
+00:03:49,500 --> 00:03:51,570
+Y me encontré preguntándome cuándo
+
+89
+00:03:51,570 --> 00:03:55,410
+estaba enseñando cursos en
+R a estudiantes graduados,
+
+90
+00:03:55,410 --> 00:03:58,043
+la mayoría de los cuales
+nunca había codificado antes,
+
+91
+00:03:58,043 --> 00:04:00,460
+¿existen esos recursos en R?
+
+92
+00:04:00,460 --> 00:04:04,320
+¿Hay ilustraciones agradables,
+acogedoras y atractivas
+
+93
+00:04:04,320 --> 00:04:06,630
+que puedo incluir en
+mis materiales de curso?
+
+94
+00:04:06,630 --> 00:04:09,480
+Habría una entrada acogedora
+para los estudiantes de
+
+95
+00:04:09,480 --> 00:04:12,150
+postgrado para aprender
+nuevas funciones y paquetes.
+
+96
+00:04:12,150 --> 00:04:14,850
+Porque lo que encontré fue
+que estaría allí arriba
+
+97
+00:04:14,850 --> 00:04:17,160
+en el frente de una clase tan emocionada
+
+98
+00:04:17,160 --> 00:04:20,190
+para introducir una
+nueva y asombrosa función
+
+99
+00:04:20,190 --> 00:04:21,839
+y en la pantalla detrás de mí
+
+100
+00:04:21,839 --> 00:04:25,920
+podría haber una captura de
+pantalla de la documentación,
+
+101
+00:04:25,920 --> 00:04:27,720
+que contiene un montón de
+información realmente importante
+
+102
+00:04:27,720 --> 00:04:30,690
+que va a ser esencial para avanzar,
+
+103
+00:04:30,690 --> 00:04:34,320
+pero tal vez no fue la primera
+interacción más inspiradora
+
+104
+00:04:34,320 --> 00:04:38,070
+que un estudiante podría
+tener con una nueva función,
+
+105
+00:04:38,070 --> 00:04:40,620
+que me hizo pensar, sí, hay un lugar
+
+106
+00:04:40,620 --> 00:04:43,680
+de crear atractivas obras de
+arte que se visten de gala R
+
+107
+00:04:43,680 --> 00:04:48,500
+un poco para que se vea
+más acogedor y acogedor.
+
+108
+00:04:48,500 --> 00:04:50,990
+Y durante el año pasado,
+eso ha sido todo mi objetivo
+
+109
+00:04:50,990 --> 00:04:54,560
+como artista en residencia de RStudio,
+
+110
+00:04:54,560 --> 00:04:57,980
+ha sido crear ilustraciones
+útiles y atractivas
+
+111
+00:04:57,980 --> 00:05:00,740
+que dan la bienvenida a los
+usuarios para explorar, enseñar
+
+112
+00:05:00,740 --> 00:05:03,530
+y aprender sobre nuevos
+paquetes y funciones en R.
+
+113
+00:05:03,530 --> 00:05:06,290
+Y aún así tendrán que
+seguir comiendo sus verduras
+
+114
+00:05:06,290 --> 00:05:10,190
+y aprender esas duras
+habilidades, pero la primera
+
+115
+00:05:10,190 --> 00:05:14,000
+interacción podría ser algo
+divertido, positivo y acogedor.
+
+116
+00:05:14,000 --> 00:05:17,840
+Así que por ejemplo, en lugar
+de su primera visión de la
+
+117
+00:05:17,840 --> 00:05:20,600
+mutación siendo una captura de
+pantalla de la documentación,
+
+118
+00:05:20,600 --> 00:05:24,380
+tal vez en lugar de eso su
+primera interacción con la
+
+119
+00:05:24,380 --> 00:05:27,590
+mutación podría ser ver a
+estos útiles monstruos X-Men
+
+120
+00:05:27,590 --> 00:05:30,680
+añadiendo una nueva columna a
+un marco de datos existente.
+
+121
+00:05:30,680 --> 00:05:33,257
+Y durante el último año, no sólo he
+
+122
+00:05:33,257 --> 00:05:36,770
+ha estado creando muchas ilustraciones
+
+123
+00:05:36,770 --> 00:05:39,650
+como una interacción acogedora
+con diferentes funciones y
+
+124
+00:05:39,650 --> 00:05:41,900
+paquetes en R, pero también
+he creado ilustraciones que
+
+125
+00:05:41,900 --> 00:05:44,690
+muestran principios y conceptos
+generales de la ciencia de
+
+126
+00:05:44,690 --> 00:05:48,290
+los datos y también un montón
+de pegatinas hexagonales.
+
+127
+00:05:48,290 --> 00:05:50,742
+Pero de lo que quiero hablar ahora
+
+128
+00:05:50,742 --> 00:05:55,670
+es lo que he aprendido de la
+comunidad R en el último año.
+
+129
+00:05:55,670 --> 00:05:58,190
+Y estas han sido lecciones
+muy importantes para mí
+
+130
+00:05:58,190 --> 00:06:01,340
+como artista y como profesor
+de ciencias de la información.
+
+131
+00:06:01,340 --> 00:06:03,710
+Y lo primero es que la comunidad R
+
+132
+00:06:03,710 --> 00:06:08,300
+me ha ayudado a abrazar es esa
+linda y creíble obra de arte
+
+133
+00:06:08,300 --> 00:06:09,830
+coexistente.
+
+134
+00:06:09,830 --> 00:06:11,810
+Como Bailey, el golden retriever,
+
+135
+00:06:11,810 --> 00:06:14,720
+está sentado aquí con un
+aspecto totalmente creíble y
+
+136
+00:06:14,720 --> 00:06:17,990
+profesional mientras desarrolla
+su paquete R, también
+
+137
+00:06:17,990 --> 00:06:20,780
+se ve muy adorable.
+
+138
+00:06:20,780 --> 00:06:24,200
+Y eso puede suceder con
+las obras de arte también.
+
+139
+00:06:24,200 --> 00:06:26,000
+Y a pesar de que sabía
+esto, a pesar de que
+
+140
+00:06:26,000 --> 00:06:28,580
+sabía que hacer e incluir obras de arte
+
+141
+00:06:28,580 --> 00:06:32,090
+podría ser realmente útil
+para hacer una comunicación
+
+142
+00:06:32,090 --> 00:06:35,090
+efectiva diapositivas más
+atractivas, conectando con los
+
+143
+00:06:35,090 --> 00:06:38,360
+estudiantes y aclarando
+conceptos, mostrando empatía,
+
+144
+00:06:38,360 --> 00:06:41,700
+bajando barreras de
+aprendizaje, me encanta hacerlo.
+
+145
+00:06:41,700 --> 00:06:45,470
+Y también incluir obras de arte
+en los materiales del curso
+
+146
+00:06:45,470 --> 00:06:47,090
+puede realmente ayudar a
+los estudiantes a entender
+
+147
+00:06:47,090 --> 00:06:48,770
+que, sí, la creatividad y
+el trabajo artístico tienen
+
+148
+00:06:48,770 --> 00:06:50,700
+un lugar en la ciencia.
+
+149
+00:06:50,700 --> 00:06:53,480
+A pesar de que sabía esas cosas, allí
+
+150
+00:06:53,480 --> 00:06:56,900
+siempre fue este pequeño griñón
+en mi hombro diciendo, OK,
+
+151
+00:06:56,900 --> 00:07:00,020
+puedes inclinarte hacia las
+obras de arte para R&amp;D
+
+152
+00:07:00,020 --> 00:07:02,450
+a la educación científica,
+pero sólo debes saber
+
+153
+00:07:02,450 --> 00:07:06,620
+que eso podría realmente
+dañar su credibilidad
+
+154
+00:07:06,620 --> 00:07:08,270
+como dato científico.
+
+155
+00:07:08,270 --> 00:07:10,460
+Y hay un punto de inflexión cuando
+
+156
+00:07:10,460 --> 00:07:13,340
+me di cuenta de que esto
+era totalmente infundado.
+
+157
+00:07:13,340 --> 00:07:16,550
+Y fue entonces cuando Hadley Wickham pidió
+
+158
+00:07:16,550 --> 00:07:19,640
+crear una serie de
+ilustraciones para una próxima
+
+159
+00:07:19,640 --> 00:07:21,598
+charla que estaba dando llamada
+
+160
+00:07:21,598 --> 00:07:23,750
+"La alegría de la programación funcional".
+
+161
+00:07:23,750 --> 00:07:26,120
+Y estaba tan emocionado
+porque sabía que esto
+
+162
+00:07:26,120 --> 00:07:28,695
+iba a ser como una gran
+charla, una oportunidad
+
+163
+00:07:28,695 --> 00:07:32,150
+realmente increíble para
+compartir el trabajo artístico.
+
+164
+00:07:32,150 --> 00:07:35,210
+Y yo esperaba eso porque este
+era un profesional altamente
+
+165
+00:07:35,210 --> 00:07:37,970
+importante, hablar de
+antemano de que esto iba
+
+166
+00:07:37,970 --> 00:07:40,970
+a ser tal vez algunos diseños
+elegantes que estaba creando
+
+167
+00:07:40,970 --> 00:07:42,770
+para ir junto con las diapositivas.
+
+168
+00:07:42,770 --> 00:07:45,650
+Y para mi absoluto placer, Hadley,
+
+169
+00:07:45,650 --> 00:07:48,680
+cuando le pregunté en qué
+estilo estaba pensando,
+
+170
+00:07:48,680 --> 00:07:52,250
+respondió que estaba
+pensando en estos monstruos
+
+171
+00:07:52,250 --> 00:07:54,547
+siendo incluidos en esta serie.
+
+172
+00:07:54,547 --> 00:07:56,630
+Y traté de jugar bien y dije: "Oh, sí",
+
+173
+00:07:56,630 --> 00:07:58,830
+por supuesto que los
+monstruos deberían estar ahí.
+
+174
+00:07:58,830 --> 00:08:01,550
+Pero en mi corazón yo decía, ¡oh Dios mío!
+
+175
+00:08:01,550 --> 00:08:04,070
+Los monstruos lo han logrado, y esto
+
+176
+00:08:04,070 --> 00:08:09,070
+es como una linda obra de
+arte fuera invitada a estar
+
+177
+00:08:09,350 --> 00:08:11,790
+en el nivel más alto en las
+charlas de R y ciencia de datos.
+
+178
+00:08:11,790 --> 00:08:14,210
+No sólo se invitó a los monstruos,
+
+179
+00:08:14,210 --> 00:08:17,090
+pero iban a hacer
+magdalenas en esta serie.
+
+180
+00:08:17,090 --> 00:08:20,198
+Así que realmente
+capturar para mí esta idea
+
+181
+00:08:20,198 --> 00:08:21,698
+linda y creíble..
+
+182
+00:08:21,698 --> 00:08:24,710
+no están en desacuerdo entre
+sí, que incluyendo a las lindas
+
+183
+00:08:24,710 --> 00:08:27,800
+ilustraciones pueden ser una
+enseñanza muy poderosa en
+
+184
+00:08:27,800 --> 00:08:30,110
+cualquier nivel.
+
+185
+00:08:30,110 --> 00:08:33,860
+Creo que el único ejemplo que
+capta esto tan perfectamente
+
+186
+00:08:33,860 --> 00:08:38,860
+es la insignia de entrenador
+certificado de RStudio,
+
+187
+00:08:39,830 --> 00:08:44,830
+que es adorable, pero dos es
+la placa que se usa cuando los
+
+188
+00:08:44,840 --> 00:08:46,957
+entrenadores certificados
+consiguen su certificación,
+
+189
+00:08:46,957 --> 00:08:48,815
+que son algunos de los mejores educadores
+
+190
+00:08:48,815 --> 00:08:50,250
+de la comunidad R.
+
+191
+00:08:50,250 --> 00:08:53,780
+Y este ha sido un tema que se ha reforzado
+
+192
+00:08:53,780 --> 00:08:56,600
+con casi todas las
+interacciones que he tenido,
+
+193
+00:08:56,600 --> 00:09:00,080
+tanto con RStudio como en la comunidad R
+
+194
+00:09:00,080 --> 00:09:02,930
+es que hay una refrescante falta de ego
+
+195
+00:09:02,930 --> 00:09:06,020
+sobre cómo se ven los
+materiales educativos.
+
+196
+00:09:06,020 --> 00:09:09,260
+Y todos son siempre
+acogedores y alentadores
+
+197
+00:09:09,260 --> 00:09:13,770
+recursos educativos más accesibles.
+
+198
+00:09:13,770 --> 00:09:16,460
+Lo que eso significa es
+que, mientras que yo empecé
+
+199
+00:09:16,460 --> 00:09:18,740
+con este pequeño griñón en mi hombro
+
+200
+00:09:18,740 --> 00:09:21,380
+cuestionando mi credibilidad
+y trayendo muchas dudas
+
+201
+00:09:21,380 --> 00:09:22,880
+a mi mente,
+
+202
+00:09:22,880 --> 00:09:26,480
+lo que tengo ahora es el
+mismo griñón que ahora está
+
+203
+00:09:26,480 --> 00:09:29,160
+animándome y siempre preguntando,
+
+204
+00:09:29,160 --> 00:09:32,390
+¿puedo hacer esto más
+accesible o más bonito
+
+205
+00:09:32,390 --> 00:09:34,040
+de alguna manera?
+
+206
+00:09:34,040 --> 00:09:36,200
+La segunda gran cosa que he aprendido
+
+207
+00:09:36,200 --> 00:09:38,660
+de la comunidad R durante el año pasado
+
+208
+00:09:38,660 --> 00:09:40,093
+es que el arte puede ser realmente
+
+209
+00:09:40,093 --> 00:09:41,960
+una herramienta de
+enseñanza y aprendizaje útil
+
+210
+00:09:41,960 --> 00:09:44,810
+que ayuda a los estudiantes
+a involucrarse y recordar
+
+211
+00:09:44,810 --> 00:09:46,310
+nuevas funciones.
+
+212
+00:09:46,310 --> 00:09:49,010
+Un ejemplo del tipo de obra
+de arte que he estado creando
+
+213
+00:09:49,010 --> 00:09:50,601
+es esta ilustración para la función
+
+214
+00:09:50,601 --> 00:09:52,580
+de estrujamiento de la cuerda.
+
+215
+00:09:52,580 --> 00:09:54,130
+Y el trabajo del
+estrujamiento de la cuerda
+
+216
+00:09:54,130 --> 00:09:55,970
+es eliminar el liderazgo, el arrastre,
+
+217
+00:09:55,970 --> 00:09:59,480
+y los repetidos espacios blancos
+interiores de las cuerdas.
+
+218
+00:09:59,480 --> 00:10:01,580
+Y aquí vemos estos cuatro monstruos
+
+219
+00:10:01,580 --> 00:10:04,470
+que están trabajando juntos
+para aplastar esta cuerda.
+
+220
+00:10:04,470 --> 00:10:08,190
+Y al hacerlo están expulsando
+el exceso de espacio blanco.
+
+221
+00:10:08,190 --> 00:10:09,865
+Esta combinación de tener un texto
+
+222
+00:10:09,865 --> 00:10:12,812
+y algo que explique verbalmente
+y también una ilustración
+
+223
+00:10:12,812 --> 00:10:15,740
+que muestra lo que esa
+función está haciendo.
+
+224
+00:10:15,740 --> 00:10:17,873
+Creo que es una combinación poderosa
+
+225
+00:10:17,873 --> 00:10:20,080
+que puede ayudar con la permanencia.
+
+226
+00:10:20,080 --> 00:10:22,640
+Un ejemplo de esto
+sucediendo en la naturaleza
+
+227
+00:10:22,640 --> 00:10:25,400
+es esta ilustración que trataba de
+
+228
+00:10:25,400 --> 00:10:28,670
+de ayudar a las personas a
+recordar el uso de un grupo
+
+229
+00:10:28,670 --> 00:10:32,390
+si han usado el grupo anteriormente.
+
+230
+00:10:32,390 --> 00:10:34,550
+Tenemos en primer plano dos monstruos
+
+231
+00:10:34,550 --> 00:10:38,000
+que están en una fiesta de
+cumpleaños, y podrías ver que uno
+
+232
+00:10:38,000 --> 00:10:41,510
+de ellos ha recibido este
+increíble regalo de grupo.
+
+233
+00:10:41,510 --> 00:10:43,710
+Pero lo más importante
+para esta ilustración,
+
+234
+00:10:43,710 --> 00:10:46,610
+es que podemos ver en el fondo
+este otro pequeño monstruo
+
+235
+00:10:46,610 --> 00:10:50,210
+manteniendo como regalo un
+grupo de desgrupo que está tan
+
+236
+00:10:50,210 --> 00:10:51,890
+esperanzado de ser incluidos.
+
+237
+00:10:51,890 --> 00:10:54,200
+Y la reacción a esta ilustración
+
+238
+00:10:54,200 --> 00:10:56,750
+era exactamente lo que esperaba que fuera,
+
+239
+00:10:56,750 --> 00:11:00,350
+que es una reacción emocional
+que asegura que la gente no
+
+240
+00:11:00,350 --> 00:11:01,850
+olvida el desagrupamiento.
+
+241
+00:11:01,850 --> 00:11:03,680
+Por ejemplo, algunas de
+las respuestas fueron,
+
+242
+00:11:03,680 --> 00:11:05,146
+"Estoy tan triste por esa pequeña burbuja
+
+243
+00:11:05,146 --> 00:11:07,160
+que se ha quedado fuera...
+
+244
+00:11:07,160 --> 00:11:10,310
+Siempre voy a recordar esto
+cuando use el desgrupo.
+
+245
+00:11:10,310 --> 00:11:12,980
+Nunca más voy a despreciar el desgrupo".
+
+246
+00:11:12,980 --> 00:11:14,930
+Y mi favorito fue algunos que
+
+247
+00:11:14,930 --> 00:11:17,630
+dijeron que sólo podían ayudar
+a alguien más a resolver
+
+248
+00:11:17,630 --> 00:11:20,990
+un problema porque recordaban...
+
+249
+00:11:20,990 --> 00:11:23,680
+el dibujo algo triste.
+
+250
+00:11:23,680 --> 00:11:26,140
+Creo que esto realmente refleja
+que el trabajo artístico
+
+251
+00:11:26,140 --> 00:11:28,330
+puede ser una forma de involucrar
+las emociones de la gente
+
+252
+00:11:28,330 --> 00:11:32,190
+que ayuda a recordar
+habilidades importantes.
+
+253
+00:11:32,190 --> 00:11:35,760
+El arte también puede ser
+muy útil de ayudar a aclarar
+
+254
+00:11:35,760 --> 00:11:38,290
+conceptos grandes o vagos.
+
+255
+00:11:38,290 --> 00:11:41,430
+Por ejemplo, recientemente
+trabajé con Julia Lowndes
+
+256
+00:11:41,430 --> 00:11:45,060
+en una serie de
+ilustraciones para intentar
+
+257
+00:11:45,060 --> 00:11:48,690
+de ilustrar los beneficios de trabajar
+
+258
+00:11:48,690 --> 00:11:50,473
+con datos ordenados, una
+organización de datos
+
+259
+00:11:50,473 --> 00:11:53,430
+en una estructura de datos ordenada.
+
+260
+00:11:53,430 --> 00:11:55,380
+Y lo que esta ilustración muestra
+
+261
+00:11:55,380 --> 00:11:59,970
+es que si tienes conjuntos de
+datos que están todos en una
+
+262
+00:11:59,970 --> 00:12:02,790
+estructura ordenada puedes
+usar las mismas herramientas de
+
+263
+00:12:02,790 --> 00:12:05,220
+manera similar a través
+de los conjuntos de datos.
+
+264
+00:12:05,220 --> 00:12:08,860
+Pero en contraste, si
+tenemos datos desordenados.
+
+265
+00:12:08,860 --> 00:12:11,970
+Lo que significa que a menudo
+estamos hackeando juntos
+
+266
+00:12:11,970 --> 00:12:15,270
+herramientas únicas para
+tratar con conjuntos de datos
+
+267
+00:12:15,270 --> 00:12:18,990
+únicos en sus propias y únicas
+formas, lo cual es desafiante
+
+268
+00:12:18,990 --> 00:12:21,997
+y tedioso y dificulta la
+colaboración con la gente.
+
+269
+00:12:21,997 --> 00:12:23,580
+Así que creo que esta serie fue realmente
+
+270
+00:12:23,580 --> 00:12:26,340
+útil en la toma de algún
+tipo de ideas generales
+
+271
+00:12:26,340 --> 00:12:29,910
+sobre los beneficios de los
+datos ordenados y la captura de
+
+272
+00:12:29,910 --> 00:12:34,770
+los mismos de una manera que
+es más memorable visualmente.
+
+273
+00:12:34,770 --> 00:12:37,170
+Las obras de arte también
+pueden hacer cosas que
+
+274
+00:12:37,170 --> 00:12:39,210
+son un poco más intimidantes
+para los estudiantes,
+
+275
+00:12:39,210 --> 00:12:41,610
+se sienten un poco más
+amigables, y proporcionan
+
+276
+00:12:41,610 --> 00:12:44,010
+un camino de entrada más acogedor.
+
+277
+00:12:44,010 --> 00:12:47,130
+Por ejemplo, para los bucles
+normalmente no son la cosa
+
+278
+00:12:47,130 --> 00:12:50,190
+más emocionante de aprender
+para los estudiantes.
+
+279
+00:12:50,190 --> 00:12:51,870
+Pero son especialmente intimidantes
+
+280
+00:12:51,870 --> 00:12:55,440
+como las secuencias de números y el código
+
+281
+00:12:55,440 --> 00:12:59,730
+entrando y saliendo que es
+un poco intimidante de ver.
+
+282
+00:12:59,730 --> 00:13:02,730
+¿Y si en vez de eso pudiera
+haber un vector que es
+
+283
+00:13:02,730 --> 00:13:05,010
+en realidad un desfile de monstruos.
+
+284
+00:13:05,010 --> 00:13:07,590
+Y al pasar por eso para el bucle,
+
+285
+00:13:07,590 --> 00:13:09,810
+dependiendo de la forma del monstruo,
+
+286
+00:13:09,810 --> 00:13:13,180
+se les asigna o bien gafas
+de sol o un sombrero,
+
+287
+00:13:13,180 --> 00:13:15,090
+y entonces lo que podemos
+ver es el resultado
+
+288
+00:13:15,090 --> 00:13:18,330
+de cada uno de esos monstruos que van
+
+289
+00:13:18,330 --> 00:13:21,060
+a través de eso para el bucle
+o conseguir sus gafas de sol
+
+290
+00:13:21,060 --> 00:13:22,260
+o sombrero.
+
+291
+00:13:22,260 --> 00:13:24,060
+Y la tercera cosa que he aprendido
+
+292
+00:13:24,060 --> 00:13:28,980
+es que el arte puede ser una herramienta
+
+293
+00:13:28,980 --> 00:13:31,020
+increíblemente poderosa para
+crear comunidades solidarias.
+
+294
+00:13:31,020 --> 00:13:33,180
+Como pintor de paisajes originalmente, yo
+
+295
+00:13:33,180 --> 00:13:37,140
+no entendía lo importante
+que podía ser esto.
+
+296
+00:13:37,140 --> 00:13:42,140
+Pero el arte puede ser una
+forma de mostrar directamente el
+
+297
+00:13:42,330 --> 00:13:43,740
+apoyo a los estudiantes,
+puede mostrar empatía.
+
+298
+00:13:43,740 --> 00:13:46,790
+Por ejemplo, aquí vemos
+este pequeño amigo que sólo
+
+299
+00:13:46,790 --> 00:13:48,795
+...necesita tomarse un minuto.
+
+300
+00:13:48,795 --> 00:13:51,150
+Así que puede ser realmente
+útil para mostrar empatía
+
+301
+00:13:51,150 --> 00:13:52,920
+cuando los estudiantes
+están tal vez luchando
+
+302
+00:13:52,920 --> 00:13:56,830
+o se sienten solos en las
+luchas a las que enfrentan.
+
+303
+00:13:56,830 --> 00:13:59,110
+Puede ser una forma de
+implicar a la comunidad
+
+304
+00:13:59,110 --> 00:14:01,840
+creando actividades que
+incluyen obras de arte.
+
+305
+00:14:01,840 --> 00:14:03,820
+Por ejemplo, con estos
+libros para colorear
+
+306
+00:14:03,820 --> 00:14:06,310
+ilustraciones de "Sesión R abortada"
+
+307
+00:14:06,310 --> 00:14:09,460
+y el favorito de todo el
+mundo "objeto de tipo cierre
+
+308
+00:14:09,460 --> 00:14:12,020
+no es subconjunto".
+
+309
+00:14:12,020 --> 00:14:14,930
+Y también puede ser una forma muy buena
+
+310
+00:14:14,930 --> 00:14:16,910
+que los diferentes grupos y comunidades
+
+311
+00:14:16,910 --> 00:14:18,470
+pueden representarse a sí mismos y hacer
+
+312
+00:14:18,470 --> 00:14:20,360
+que otras personas se sienten incluidas.
+
+313
+00:14:20,360 --> 00:14:22,160
+La forma más común en que vemos esto
+
+314
+00:14:22,160 --> 00:14:25,340
+está en las muchas etiquetas
+hexagonales que existen
+
+315
+00:14:25,340 --> 00:14:27,890
+que diferentes grupos,
+organizaciones e incluso
+
+316
+00:14:27,890 --> 00:14:32,720
+los paquetes usan para
+representarse a sí mismos.
+
+317
+00:14:32,720 --> 00:14:36,850
+Y no tenía ni idea antes de
+unirme a la comunidad R el poder
+
+318
+00:14:36,850 --> 00:14:41,850
+que un diseño hexagonal de 2
+por 1,73 pulgadas podría tener.
+
+319
+00:14:42,160 --> 00:14:44,260
+Y esto es algo de lo que
+estaba tan sorprendida
+
+320
+00:14:44,260 --> 00:14:48,880
+por el apoyo y la demanda
+de etiquetas hexagonales
+
+321
+00:14:48,880 --> 00:14:51,730
+que creo que realmente refleja
+lo emocionada que está la
+
+322
+00:14:51,730 --> 00:14:55,180
+gente de tener algo que
+puedan poner en su ordenador
+
+323
+00:14:55,180 --> 00:14:57,880
+o lo que sea para representarse
+a sí mismos y a los grupos
+
+324
+00:14:57,880 --> 00:15:00,950
+de los que forman parte.
+
+325
+00:15:00,950 --> 00:15:04,040
+Así que en resumen, lo que
+he aprendido en el último año
+
+326
+00:15:04,040 --> 00:15:07,040
+y eso ha sido reforzado
+por tantas personas en la
+
+327
+00:15:07,040 --> 00:15:09,770
+comunidad R, es que las
+contribuciones creativas
+
+328
+00:15:09,770 --> 00:15:12,860
+pueden hacer que la codificación
+y la R sean más acogedoras
+
+329
+00:15:12,860 --> 00:15:16,190
+o incluso un lugar más
+divertido para los estudiantes y
+
+330
+00:15:16,190 --> 00:15:17,720
+usuarios en todos los niveles.
+
+331
+00:15:17,720 --> 00:15:21,830
+Y ¿que podemos hacer para crear y apoyar
+
+332
+00:15:21,830 --> 00:15:24,290
+más arte en R?
+
+333
+00:15:24,290 --> 00:15:28,050
+Lo primero es que podemos
+encontrar maneras de apoyar
+
+334
+00:15:28,050 --> 00:15:29,730
+contribuciones creativas.
+
+335
+00:15:29,730 --> 00:15:32,760
+Así que cualquier nivel
+que tenga sentido para ti,
+
+336
+00:15:32,760 --> 00:15:34,235
+¿cómo puedes apoyar a los artistas
+
+337
+00:15:34,235 --> 00:15:36,120
+y a los colaboradores creativos?
+
+338
+00:15:36,120 --> 00:15:38,730
+Sólo con ver esta charla que está apoyando
+
+339
+00:15:38,730 --> 00:15:40,620
+contribuciones creativas.
+
+340
+00:15:40,620 --> 00:15:42,111
+Pero también puede incluir obras de arte
+
+341
+00:15:42,111 --> 00:15:43,690
+en tus recursos de enseñanza.
+
+342
+00:15:43,690 --> 00:15:45,681
+Puedes dar like o
+compartir las obras de arte
+
+343
+00:15:45,681 --> 00:15:47,539
+que se publican en Twitter.
+
+344
+00:15:47,539 --> 00:15:49,410
+Cualquier nivel que tenga sentido para ti,
+
+345
+00:15:49,410 --> 00:15:51,240
+Le garantizo que su apoyo
+
+346
+00:15:51,240 --> 00:15:53,070
+será significativo para un artista y
+
+347
+00:15:53,070 --> 00:15:55,820
+hará que deseen crear más.
+
+348
+00:15:55,820 --> 00:15:57,620
+La segunda es que podrías
+pensar en formas para colaborar
+
+349
+00:15:57,620 --> 00:16:00,860
+más formalmente con los
+contribuyentes creativos.
+
+350
+00:16:00,860 --> 00:16:03,320
+Por ejemplo, ¿puedes
+contratar a un artista
+
+351
+00:16:03,320 --> 00:16:05,720
+para añadir algo a tus recursos?
+
+352
+00:16:05,720 --> 00:16:07,703
+¿Puede escribirle a un artista en una beca
+
+353
+00:16:07,703 --> 00:16:09,740
+en la que estás trabajando?
+
+354
+00:16:09,740 --> 00:16:12,260
+¿O puede abrir un programa
+de residencia para artistas
+
+355
+00:16:12,260 --> 00:16:15,680
+donde le garantizo que
+tendrá su trabajo reflejado
+
+356
+00:16:15,680 --> 00:16:18,080
+de una manera realmente
+atractiva para la gente
+
+357
+00:16:18,080 --> 00:16:20,338
+que de otra manera no lo hubiera sabido
+
+358
+00:16:20,338 --> 00:16:22,370
+o se hubiera comprometido con él?
+
+359
+00:16:22,370 --> 00:16:25,250
+Y finalmente, le pediría que
+pensara en las formas en que
+
+360
+00:16:25,250 --> 00:16:27,620
+usted puede ser un contribuyente creativo.
+
+361
+00:16:27,620 --> 00:16:29,870
+Entonces, ¿qué es lo que
+haces para que puedas ser
+
+362
+00:16:29,870 --> 00:16:32,960
+capaz de compartir con la comunidad?
+
+363
+00:16:32,960 --> 00:16:36,090
+Ya tenemos esta increíble
+comunidad de personas.
+
+364
+00:16:36,090 --> 00:16:40,520
+Y muchos de ellos están creando
+y compartiendo increíbles
+
+365
+00:16:40,520 --> 00:16:45,520
+obras de arte y diseños
+generados con telas y R,
+
+366
+00:16:45,620 --> 00:16:48,860
+representaciones en 3D,
+diseños gráficos increíbles
+
+367
+00:16:48,860 --> 00:16:50,860
+hechos en ggplot, y tantas otras cosas.
+
+368
+00:16:50,860 --> 00:16:54,080
+Y deberíamos pensar en qué
+otros tipos de obras de arte
+
+369
+00:16:54,080 --> 00:16:57,170
+o contribuciones creativas
+quisiéramos invitar.
+
+370
+00:16:57,170 --> 00:16:59,780
+Y la respuesta debería ser todas ellas.
+
+371
+00:16:59,780 --> 00:17:02,960
+Panadería, música , escultura, danza.
+
+372
+00:17:02,960 --> 00:17:04,609
+Hay alguien en el mundo que
+
+373
+00:17:04,609 --> 00:17:08,300
+puede hacer la perfecta danza
+interpretativa de pivot_longer
+
+374
+00:17:08,300 --> 00:17:11,569
+y pivot_wider, y quiero experimentar eso.
+
+375
+00:17:11,569 --> 00:17:15,500
+Memes, diseño, poesía, arte
+en actividades, y tanto
+
+376
+00:17:15,500 --> 00:17:19,760
+más para que podamos crear obras de arte
+
+377
+00:17:19,760 --> 00:17:23,000
+y las contribuciones creativas
+que se comprometen y resuenan
+
+378
+00:17:23,000 --> 00:17:25,542
+con cada usuario R
+diferente que quisiéramos
+
+379
+00:17:25,542 --> 00:17:27,016
+que se sienta integrado.
+
+380
+00:17:28,008 --> 00:17:29,800
+Y a veces creo que hay esta presión
+
+381
+00:17:29,800 --> 00:17:32,380
+si estás pensando en lo que puedo aportar.
+
+382
+00:17:32,380 --> 00:17:35,410
+A veces puede haber presión para sentir
+
+383
+00:17:35,410 --> 00:17:37,660
+como si tuviera que haber
+algún resultado de aprendizaje
+
+384
+00:17:37,660 --> 00:17:38,951
+o alguien tiene que tener
+una toma de distancia
+
+385
+00:17:38,951 --> 00:17:41,230
+o una nueva habilidad.
+
+386
+00:17:41,230 --> 00:17:43,720
+Y les animo a que recuerden que hacer
+
+387
+00:17:43,720 --> 00:17:46,390
+que alguien se sienta un poco
+más feliz mientras intenta
+
+388
+00:17:46,390 --> 00:17:50,020
+de aprender algo difícil
+es una razón absolutamente
+
+389
+00:17:50,020 --> 00:17:52,480
+grandiosa para crear y compartir su arte.
+
+390
+00:17:52,480 --> 00:17:54,070
+Una experiencia que tuve con esto
+
+391
+00:17:54,070 --> 00:17:56,890
+recientemente fue que estaba
+teniendo un día difícil.
+
+392
+00:17:56,890 --> 00:17:59,260
+Estaba deprimida
+desplazándome por Twitter,
+
+393
+00:17:59,260 --> 00:18:03,670
+y me encontré por casualidad
+con la foto de Jacqueline Nolis
+
+394
+00:18:03,670 --> 00:18:06,040
+de la R unos panqueques
+que ella había hecho.
+
+395
+00:18:06,040 --> 00:18:08,500
+Y esto no resolvió mis
+problemas de codificación,
+
+396
+00:18:08,500 --> 00:18:10,570
+esto no escribió mi conferencia para mí,
+
+397
+00:18:10,570 --> 00:18:14,500
+pero lo que sí hizo es que me
+hizo exclamar, ¡panqueques R!
+
+398
+00:18:14,500 --> 00:18:17,860
+Y luego continué mi día
+un poco más feliz...
+
+399
+00:18:17,860 --> 00:18:22,650
+porque los panqueques R
+habían existido en el mundo.
+
+400
+00:18:22,650 --> 00:18:26,570
+Así que para terminar,
+el arte no es la solución
+
+401
+00:18:26,570 --> 00:18:29,120
+a los problemas de la tecnología,
+especialmente relacionados
+
+402
+00:18:29,120 --> 00:18:32,330
+a la inclusión y la bienvenida.
+
+403
+00:18:32,330 --> 00:18:35,660
+A menos que estemos hablando
+de esta escultura de cola de
+
+404
+00:18:35,660 --> 00:18:38,180
+ballena que está literalmente
+salvando un tren que se ha
+
+405
+00:18:38,180 --> 00:18:40,130
+descarrilado al final de
+las pistas, el arte no
+
+406
+00:18:40,130 --> 00:18:42,320
+salvará la tecnología,
+que es por lo que estoy
+
+407
+00:18:42,320 --> 00:18:45,050
+tan agradecido por las
+muchas organizaciones
+
+408
+00:18:45,050 --> 00:18:48,260
+grupos, individuos e iniciativas,
+algunos de los cuales
+
+409
+00:18:48,260 --> 00:18:51,890
+se muestran aquí que han estado
+haciendo este duro trabajo
+
+410
+00:18:51,890 --> 00:18:55,100
+para hacer que R sea más
+acogedor para más usuarios
+
+411
+00:18:55,100 --> 00:18:57,080
+desde antes de que yo
+incluso empezara a usar R.
+
+412
+00:18:57,080 --> 00:18:59,840
+Así que aunque el arte
+no es la solución, yo
+
+413
+00:18:59,840 --> 00:19:02,540
+espero que pueda ser una
+pieza de apoyo que contribuye
+
+414
+00:19:02,540 --> 00:19:06,740
+a esos esfuerzos haciendo
+que todo el paisaje de R,
+
+415
+00:19:06,740 --> 00:19:10,730
+que ya es tan vibrante, sea
+incluso un poco más soleado.
+
+416
+00:19:10,730 --> 00:19:12,950
+Espero hablar con muchos de ustedes
+
+417
+00:19:12,950 --> 00:19:14,480
+sobre todas las diferentes
+formas en que podemos
+
+418
+00:19:14,480 --> 00:19:18,020
+contribuir con cosas más
+creativas a la comunidad R.
+
+419
+00:19:18,020 --> 00:19:19,960
+Gracias.
+

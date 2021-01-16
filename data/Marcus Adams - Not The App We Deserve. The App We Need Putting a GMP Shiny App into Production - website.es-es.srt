@@ -1,0 +1,2282 @@
+﻿1
+00:00:07,331 --> 00:00:08,164
+RCUS ADAMS: Hola.
+
+2
+00:00:08,164 --> 00:00:09,180
+Soy Marcus Adams.
+
+3
+00:00:09,180 --> 00:00:11,730
+Trabajo en la división de
+fabricación farmacéutica de Merck
+
+4
+00:00:11,730 --> 00:00:15,210
+en el Grupo de Analítica
+Proactiva Digital de Procesos.
+
+5
+00:00:15,210 --> 00:00:17,490
+Esta es nuestra mascota, Rex.
+
+6
+00:00:17,490 --> 00:00:20,580
+Como muchas cosas para
+nuestro amigo prehistórico,
+
+7
+00:00:20,580 --> 00:00:22,650
+estábamos detectando que la información
+
+8
+00:00:22,650 --> 00:00:25,110
+podíamos verla, pero a
+veces era inalcanzable.
+
+9
+00:00:25,110 --> 00:00:26,700
+Y eso nos entristecía.
+
+10
+00:00:26,700 --> 00:00:29,520
+Trabajamos para poner esos datos en manos
+
+11
+00:00:29,520 --> 00:00:32,009
+de nuestros científicos e
+ingenieros en nuestros lugares
+
+12
+00:00:32,009 --> 00:00:34,080
+de fabricación de todo el mundo.
+
+13
+00:00:34,080 --> 00:00:36,868
+Me siento muy honrado de
+estar aquí con vosotros hoy.
+
+14
+00:00:36,868 --> 00:00:38,910
+Tuve el privilegio de
+asistir a RStudio::conf
+
+15
+00:00:38,910 --> 00:00:41,610
+y siempre me ha parecido una increíble
+
+16
+00:00:41,610 --> 00:00:43,110
+experiencia enriquecedora.
+
+17
+00:00:43,110 --> 00:00:45,180
+Puedes conocer nuevas
+y emocionantes formas
+
+18
+00:00:45,180 --> 00:00:46,980
+en las que la gente usa el lenguaje R.
+
+19
+00:00:46,980 --> 00:00:48,480
+Tienes la oportunidad de tener
+excelentes conversaciones
+
+20
+00:00:48,480 --> 00:00:50,970
+con maravillosos miembros
+de la comunidad R.
+
+21
+00:00:50,970 --> 00:00:53,430
+Y puedes apostar sobre
+quién tendrá la cola
+
+22
+00:00:53,430 --> 00:00:55,500
+más larga en el evento de firma de libros.
+
+23
+00:00:55,500 --> 00:00:59,640
+Pista: en 2020, no fue Hadley Wickham.
+
+24
+00:00:59,640 --> 00:01:02,770
+Por desgracia, no puedo ayudarte
+con ninguna de estas cosas.
+
+25
+00:01:02,770 --> 00:01:04,709
+De hecho, estoy a punto
+de mostrarte posiblemente
+
+26
+00:01:04,709 --> 00:01:06,810
+la aplicación más shiny
+y aburrida del mundo.
+
+27
+00:01:06,810 --> 00:01:10,300
+Pero es una aplicación shiny en proceso.
+
+28
+00:01:10,300 --> 00:01:11,470
+Aquí está.
+
+29
+00:01:11,470 --> 00:01:14,020
+Cuadro de entrada de texto,
+pega en nuestra búsqueda,
+
+30
+00:01:14,020 --> 00:01:15,250
+podría haberlo subido,
+
+31
+00:01:15,250 --> 00:01:16,240
+demasiado elegante.
+
+32
+00:01:16,240 --> 00:01:17,230
+Bloquéalo.
+
+33
+00:01:17,230 --> 00:01:18,590
+Comprueba la sintaxis.
+
+34
+00:01:18,590 --> 00:01:19,423
+Excelente.
+
+35
+00:01:19,423 --> 00:01:21,760
+Haz clic en un botón y espera un poco más.
+
+36
+00:01:21,760 --> 00:01:24,700
+Podría cantar para ti, pero
+mi canción de karaoke favorita
+
+37
+00:01:24,700 --> 00:01:26,590
+es Rap God, que dura seis minutos.
+
+38
+00:01:26,590 --> 00:01:28,990
+Y no deberíamos esperar tanto.
+
+39
+00:01:28,990 --> 00:01:29,823
+Excelente.
+
+40
+00:01:29,823 --> 00:01:30,323
+Está hecho.
+
+41
+00:01:30,323 --> 00:01:32,080
+Haz clic en un botón, descarga el PDF.
+
+42
+00:01:32,080 --> 00:01:32,913
+Aquí está.
+
+43
+00:01:32,913 --> 00:01:34,230
+Aquí está nuestro informe.
+
+44
+00:01:34,230 --> 00:01:36,750
+Nuestra tabla de contenido,
+los atributos de calidad.
+
+45
+00:01:36,750 --> 00:01:38,310
+Pasa al primero.
+
+46
+00:01:38,310 --> 00:01:43,110
+Nuestra tabla de control,
+reglas de ejecución, resúmenes
+
+47
+00:01:43,110 --> 00:01:44,070
+e histogramas.
+
+48
+00:01:44,070 --> 00:01:47,330
+Mira los repartos antes y
+después de un cambio de proceso.
+
+49
+00:01:47,330 --> 00:01:50,350
+Lo sé, ¿por qué te estoy enseñando esto?
+
+50
+00:01:50,350 --> 00:01:51,670
+El R Markdown 101.
+
+51
+00:01:51,670 --> 00:01:52,840
+¿Crea un informe en PDF?
+
+52
+00:01:52,840 --> 00:01:54,470
+¿Me estás tomando el pelo?
+
+53
+00:01:54,470 --> 00:01:55,930
+Eso no es lo importante.
+
+54
+00:01:55,930 --> 00:01:58,510
+Lo importante para nosotros es que esto
+
+55
+00:01:58,510 --> 00:02:01,370
+ahorra decenas de miles de horas cada año,
+
+56
+00:02:01,370 --> 00:02:04,360
+el equivalente a millones
+de dólares en productividad.
+
+57
+00:02:04,360 --> 00:02:07,090
+Es más importante que los
+ingenieros y científicos puedan
+
+58
+00:02:07,090 --> 00:02:09,669
+usar estas horas para
+actividades más valiosas
+
+59
+00:02:09,669 --> 00:02:14,200
+en lugar de observar y
+extraer datos de memoria.
+
+60
+00:02:14,200 --> 00:02:17,500
+Y más importante, es lo que
+necesitaban nuestros sitios.
+
+61
+00:02:17,500 --> 00:02:20,020
+Cuando abrimos una de
+nuestras fábricas más grandes
+
+62
+00:02:20,020 --> 00:02:22,840
+en Singapur, nos dijeron:
+"Ni siquiera podemos
+
+63
+00:02:22,840 --> 00:02:25,750
+pensar en apoyar un proyecto
+de análisis avanzado.
+
+64
+00:02:25,750 --> 00:02:29,650
+Necesitamos bajar los recursos
+de actividades como el CPV".
+
+65
+00:02:29,650 --> 00:02:31,960
+El CPV es una Verificación
+de Proceso Continuo,
+
+66
+00:02:31,960 --> 00:02:33,500
+el informe que acabas de ver.
+
+67
+00:02:33,500 --> 00:02:35,950
+Y ese informe se considera GMP.
+
+68
+00:02:35,950 --> 00:02:37,580
+Si no eres farmacéutico, eso significa
+
+69
+00:02:37,580 --> 00:02:40,040
+que se adhiere a las Buenas
+Prácticas de Fabricación.
+
+70
+00:02:40,040 --> 00:02:42,850
+En otras palabras, este es
+el tipo de datos e informes
+
+71
+00:02:42,850 --> 00:02:45,880
+que enviaríamos a la FDA y
+a otras agencias reguladoras
+
+72
+00:02:45,880 --> 00:02:47,110
+alrededor del mundo.
+
+73
+00:02:47,110 --> 00:02:48,790
+Este es el tipo de datos e informes
+
+74
+00:02:48,790 --> 00:02:51,370
+que usaríamos para tomar
+decisiones de lanzamiento que
+
+75
+00:02:51,370 --> 00:02:55,070
+podrían afectar a millones de
+pacientes en todo el mundo.
+
+76
+00:02:55,070 --> 00:02:57,550
+Entonces, cuando pensamos en
+esto, pensamos en producción.
+
+77
+00:02:57,550 --> 00:03:02,480
+Pensamos en la producción
+y más regulaciones.
+
+78
+00:03:02,480 --> 00:03:06,320
+Las funciones pueden ser pocas,
+y puede parecer aburrido,
+
+79
+00:03:06,320 --> 00:03:08,900
+sin embargo, es como un Transformer.
+
+80
+00:03:08,900 --> 00:03:11,000
+Hay más de lo que parece.
+
+81
+00:03:11,000 --> 00:03:15,290
+Y Fred Brooks, en su
+icónico Mythical Man-Month,
+
+82
+00:03:15,290 --> 00:03:16,610
+lo describe.
+
+83
+00:03:16,610 --> 00:03:17,990
+Dice que hay un pozo de alquitrán.
+
+84
+00:03:17,990 --> 00:03:20,420
+Empiezas con un programa en
+la esquina superior izquierda.
+
+85
+00:03:20,420 --> 00:03:21,712
+Estas son sus características principales.
+
+86
+00:03:21,712 --> 00:03:23,990
+Esto es lo que haces en un fin de semana.
+
+87
+00:03:23,990 --> 00:03:26,810
+Pero esto no es lo que le
+envías a los destinatarios.
+
+88
+00:03:26,810 --> 00:03:28,310
+Si quieres hacer un
+sistema de programación,
+
+89
+00:03:28,310 --> 00:03:31,580
+intégralo con las bases
+de datos, tu servidor de
+
+90
+00:03:31,580 --> 00:03:33,560
+autenticación, eso requerirá
+tres veces más trabajo.
+
+91
+00:03:33,560 --> 00:03:35,900
+Y si quieres convertirlo en
+un producto de programación,
+
+92
+00:03:35,900 --> 00:03:38,040
+documéntalo, pruébalo, generalízalo
+
+93
+00:03:38,040 --> 00:03:40,670
+eso también requerirá
+tres veces más trabajo.
+
+94
+00:03:40,670 --> 00:03:42,890
+Y luego, si quieres pasar a
+un sistema de programación
+
+95
+00:03:42,890 --> 00:03:46,070
+producto, lo podríamos considerar
+una app de producción...
+
+96
+00:03:46,070 --> 00:03:49,100
+eso va a llevar nueve veces
+más cantidad de trabajo.
+
+97
+00:03:49,100 --> 00:03:51,800
+Así que tu programa
+original, ese noveno...
+
+98
+00:03:51,800 --> 00:03:56,030
+esa noven..., esa es solo
+tu red neuronal recurrente.
+
+99
+00:03:56,030 --> 00:03:58,830
+Esa es solo una pequeña
+parte de la aplicación final.
+
+100
+00:03:58,830 --> 00:04:01,490
+El otro 89% es lo que
+se necesita para crear
+
+101
+00:04:01,490 --> 00:04:03,860
+una aplicación confiable,
+segura y fácil de mantener
+
+102
+00:04:03,860 --> 00:04:05,730
+en un entorno de producción.
+
+103
+00:04:05,730 --> 00:04:08,672
+Ahora bien, si no eres
+desarrollador de aplicaciones,
+
+104
+00:04:08,672 --> 00:04:10,880
+o no tienes experiencia en informática,
+
+105
+00:04:10,880 --> 00:04:13,640
+quizás no estarás
+familiarizado con el tema.
+
+106
+00:04:13,640 --> 00:04:15,380
+Nosotros no lo estábamos.
+
+107
+00:04:15,380 --> 00:04:18,440
+Somos solo un grupo de
+químicos e ingenieros químicos.
+
+108
+00:04:18,440 --> 00:04:20,399
+Y no somos una excepción.
+
+109
+00:04:20,399 --> 00:04:24,290
+Un estudio de Burtch Works
+observó que en 2019 solo el 21%
+
+110
+00:04:24,290 --> 00:04:26,900
+de los científicos de datos
+proceden de la informática.
+
+111
+00:04:26,900 --> 00:04:28,100
+El resto de nosotros
+
+112
+00:04:28,100 --> 00:04:30,620
+venimos de lugares como
+estadística, negocios,
+
+113
+00:04:30,620 --> 00:04:33,110
+economía o ciencias naturales.
+
+114
+00:04:33,110 --> 00:04:36,770
+En True Pareto Fashion,
+afortunadamente, ese 21%
+
+115
+00:04:36,770 --> 00:04:39,020
+ha hecho mucho trabajo duro por nosotros.
+
+116
+00:04:39,020 --> 00:04:41,000
+Para que pudiéramos acceder a
+una aplicación de producción,
+
+117
+00:04:41,000 --> 00:04:43,070
+tuvimos que aprender muchas cosas.
+
+118
+00:04:43,070 --> 00:04:45,170
+Pero no tengo tiempo
+para compartirlas todas.
+
+119
+00:04:45,170 --> 00:04:49,310
+Hoy solo voy a compartir
+tres de ellas con vosotros.
+
+120
+00:04:49,310 --> 00:04:51,320
+Primero, sin excusas.
+
+121
+00:04:51,320 --> 00:04:52,550
+Codifica como un equipo.
+
+122
+00:04:52,550 --> 00:04:54,500
+Antes de esto, muchos de
+nuestros scripts y aplicaciones,
+
+123
+00:04:54,500 --> 00:04:56,270
+podíamos desarrollarlos nosotros mismos.
+
+124
+00:04:56,270 --> 00:04:58,190
+Eran lo suficientemente
+pequeños, podíamos manejarlo.
+
+125
+00:04:58,190 --> 00:05:00,980
+Pero cuando multiplicas
+tu carga de trabajo por 9,
+
+126
+00:05:00,980 --> 00:05:02,360
+vas a necesitar ayuda.
+
+127
+00:05:02,360 --> 00:05:03,860
+Y cuando trabajas con otros,
+
+128
+00:05:03,860 --> 00:05:07,170
+es bueno recordar una regla de oro.
+
+129
+00:05:07,170 --> 00:05:09,420
+Programando con otros,
+es como cuando la gente
+
+130
+00:05:09,420 --> 00:05:10,510
+va a visitar tu casa.
+
+131
+00:05:10,510 --> 00:05:13,080
+Tienes que limpiar y ponerte
+pantalones de verdad.
+
+132
+00:05:13,080 --> 00:05:17,098
+Y ante todo, utilizar
+el control de versiones.
+
+133
+00:05:17,098 --> 00:05:18,640
+Es posible que hayas
+oído hablar de Git antes.
+
+134
+00:05:18,640 --> 00:05:21,460
+Es posible que lo hayas
+visto con paquetes en CRAN
+
+135
+00:05:21,460 --> 00:05:23,020
+donde está el código fuente.
+
+136
+00:05:23,020 --> 00:05:25,120
+Pero creo que lo que no
+recibe suficiente atención, es
+
+137
+00:05:25,120 --> 00:05:28,002
+el flujo de trabajo en las
+estrategias de ramificación.
+
+138
+00:05:28,002 --> 00:05:29,960
+No debes trabajar en una sola rama
+
+139
+00:05:29,960 --> 00:05:32,570
+porque te garantizo que si lo haces
+
+140
+00:05:32,570 --> 00:05:35,210
+alguien comprometerá y romperá el código.
+
+141
+00:05:35,210 --> 00:05:38,390
+Y eso será 5 minutos antes
+de dar una demostración.
+
+142
+00:05:38,390 --> 00:05:39,470
+Hay muchas opciones.
+
+143
+00:05:39,470 --> 00:05:41,840
+Pero nosotros optamos por
+un Gitflow modificado.
+
+144
+00:05:41,840 --> 00:05:43,970
+Y esto significa, en un nivel muy bajo,
+
+145
+00:05:43,970 --> 00:05:45,050
+que tenemos ramas de características.
+
+146
+00:05:45,050 --> 00:05:47,725
+Y aquí es donde estamos
+haciendo gran parte del trabajo.
+
+147
+00:05:47,725 --> 00:05:49,100
+Estamos haciendo los experimentos.
+
+148
+00:05:49,100 --> 00:05:52,010
+Las cosas pueden romperse y
+está bien porque están aisladas.
+
+149
+00:05:52,010 --> 00:05:54,530
+Pero luego, los unimos nuevamente
+en la rama de desarrollo.
+
+150
+00:05:54,530 --> 00:05:56,600
+Esta es la aplicación que funciona.
+
+151
+00:05:56,600 --> 00:05:58,520
+Esta es nuestra copia de
+trabajo de la aplicación.
+
+152
+00:05:58,520 --> 00:06:01,180
+A medida que lo probamos y
+desarrollamos, y está listo,
+
+153
+00:06:01,180 --> 00:06:02,930
+luego lo fusionamos en
+nuestra rama maestra.
+
+154
+00:06:02,930 --> 00:06:07,190
+Esa rama maestra es la que
+se implementa en producción.
+
+155
+00:06:07,190 --> 00:06:09,590
+Y para llegar allí,
+debes documentar, probar,
+
+156
+00:06:09,590 --> 00:06:11,600
+y repetir.
+
+157
+00:06:11,600 --> 00:06:14,090
+Entonces, roxygen hace que
+sea muy fácil de codificar
+
+158
+00:06:14,090 --> 00:06:16,970
+y de tener esa documentación
+en el mismo lugar.
+
+159
+00:06:16,970 --> 00:06:20,030
+Y luego puedes renderizar
+
+160
+00:06:20,030 --> 00:06:21,440
+más facilmente.
+
+161
+00:06:21,440 --> 00:06:24,140
+Probar, también es una
+forma de documentación.
+
+162
+00:06:24,140 --> 00:06:27,470
+Eso da ejemplos sobre cómo usar tu código.
+
+163
+00:06:27,470 --> 00:06:29,750
+Y, por supuesto, ambos
+juntos facilitarán a la gente
+
+164
+00:06:29,750 --> 00:06:32,930
+realizar cambios en tu código
+más rápido en el futuro
+
+165
+00:06:32,930 --> 00:06:35,600
+y saber que no están rompiendo
+la funcionalidad principal.
+
+166
+00:06:35,600 --> 00:06:39,680
+Quizás hayas usado o conozcas
+las pruebas unitarias.
+
+167
+00:06:39,680 --> 00:06:42,680
+Esta es la testthat, la
+unidad R, la más pequeña.
+
+168
+00:06:42,680 --> 00:06:44,960
+Pero también hay más
+pruebas más allá de eso.
+
+169
+00:06:44,960 --> 00:06:46,340
+Está la prueba de la interfaz de usuario.
+
+170
+00:06:46,340 --> 00:06:48,780
+Consigue que los usuarios
+prueben realmente tu aplicación,
+
+171
+00:06:48,780 --> 00:06:50,690
+mira si pueden hacer algo útil con ella.
+
+172
+00:06:50,690 --> 00:06:53,030
+O automatiza algo de eso con shinytest.
+
+173
+00:06:53,030 --> 00:06:55,400
+Y luego está el que
+probablemente recibe menos
+
+174
+00:06:55,400 --> 00:06:57,950
+atención, la prueba de carga.
+
+175
+00:06:57,950 --> 00:07:00,530
+Para nosotros, muchos de
+nuestros scripts y aplicaciones
+
+176
+00:07:00,530 --> 00:07:02,645
+se ejecutan en equipos locales.
+
+177
+00:07:02,645 --> 00:07:04,592
+Tenemos un usuario como máximo.
+
+178
+00:07:04,592 --> 00:07:06,050
+Pero cuando empiezas a poner algo
+
+179
+00:07:06,050 --> 00:07:07,508
+en un entorno de producción,
+
+180
+00:07:07,508 --> 00:07:09,107
+probablemente tendrá
+varios usuarios a la vez.
+
+181
+00:07:09,107 --> 00:07:11,690
+Y tu aplicación se funcionará
+diferente con 10 usuarios
+
+182
+00:07:11,690 --> 00:07:12,800
+que con uno.
+
+183
+00:07:12,800 --> 00:07:16,760
+Y podría ser aún más
+diferente con 10 000 usuarios.
+
+184
+00:07:16,760 --> 00:07:19,880
+Puede subir hasta 10 000 usuarios,
+
+185
+00:07:19,880 --> 00:07:22,940
+pero seguramente debrás
+probarlo antes de hacerlo.
+
+186
+00:07:22,940 --> 00:07:24,740
+Y para llegar ahí, debes
+
+187
+00:07:24,740 --> 00:07:28,093
+aprovechar la estructura de
+codificación natural de R.
+
+188
+00:07:28,093 --> 00:07:30,260
+Aprovecha el hecho de
+que funciones, paquetes,
+
+189
+00:07:30,260 --> 00:07:32,420
+y los módulos shinys
+se prestan naturalmente
+
+190
+00:07:32,420 --> 00:07:34,280
+a la división del trabajo.
+
+191
+00:07:34,280 --> 00:07:37,790
+Una persona puede centrarse en
+los detalles de una función,
+
+192
+00:07:37,790 --> 00:07:40,910
+y esta se sustrae para
+el resto del equipo.
+
+193
+00:07:40,910 --> 00:07:43,130
+Solo necesitan saber cómo
+llamar a esa función.
+
+194
+00:07:43,130 --> 00:07:45,410
+Y eso es exactamente lo que
+hicimos con nuestra aplicación.
+
+195
+00:07:45,410 --> 00:07:48,080
+En el nivel superior, está la
+aplicación de informes de CPV.
+
+196
+00:07:48,080 --> 00:07:50,907
+Que se basa en un montón
+de paquetes comunes.
+
+197
+00:07:50,907 --> 00:07:51,853
+Bien,
+
+198
+00:07:51,853 --> 00:07:54,590
+dplyr, ronrr y, por supuesto, shiny.
+
+199
+00:07:54,590 --> 00:07:57,620
+Para nosotros, creamos cuatro
+paquetes personalizados.
+
+200
+00:07:57,620 --> 00:08:00,350
+Tenemos el que se conecta a
+nuestra plataforma de análisis:
+
+201
+00:08:00,350 --> 00:08:01,640
+MantisDBC.
+
+202
+00:08:01,640 --> 00:08:04,280
+Tenemos cpvreportr que compila todo
+
+203
+00:08:04,280 --> 00:08:05,510
+en ese PDF.
+
+204
+00:08:05,510 --> 00:08:08,210
+Tenemos exceleratr que tomará
+los datos y los enviará
+
+205
+00:08:08,210 --> 00:08:09,890
+en un formato reutilizable
+por si la gente quiere
+
+206
+00:08:09,890 --> 00:08:11,420
+hacer cálculos adicionales.
+
+207
+00:08:11,420 --> 00:08:15,440
+Y luego tenemos ppxqc que hace
+los cálculos en el informe,
+
+208
+00:08:15,440 --> 00:08:18,590
+los gráficos de control,
+calcula las reglas de ejecución,
+
+209
+00:08:18,590 --> 00:08:20,480
+crea histogramas.
+
+210
+00:08:20,480 --> 00:08:22,090
+Y lo bueno de este enfoque es
+
+211
+00:08:22,090 --> 00:08:24,590
+que ahora has puesto todo tu
+esfuerzo en crear este código,
+
+212
+00:08:24,590 --> 00:08:26,240
+lo has industrializado, probado,
+
+213
+00:08:26,240 --> 00:08:28,115
+documentado y puedes reutilizarlo
+
+214
+00:08:28,115 --> 00:08:29,630
+para otras aplicaciones.
+
+215
+00:08:29,630 --> 00:08:33,450
+Por muchos usuarios que utilicen
+la aplicación de informes,
+
+216
+00:08:33,450 --> 00:08:37,422
+también habrá toneladas de datos
+científicos y usuarios de R
+
+217
+00:08:37,422 --> 00:08:38,880
+en nuestra división de fabricación que
+
+218
+00:08:38,880 --> 00:08:41,179
+ahora son mucho más fáciles de conectar
+
+219
+00:08:41,179 --> 00:08:42,620
+a nuestra plataforma de análisis.
+
+220
+00:08:42,620 --> 00:08:45,410
+Recibo correos electrónicos
+una vez a la semana sobre esto.
+
+221
+00:08:45,410 --> 00:08:47,570
+Y es genial que puedan reutilizar
+
+222
+00:08:47,570 --> 00:08:51,120
+algo que ya creamos.
+
+223
+00:08:51,120 --> 00:08:53,990
+A continuación, quiero hablar de entornos.
+
+224
+00:08:53,990 --> 00:08:56,690
+El presidente de Estados
+Unidos, Woodrow Wilson, dijo:
+
+225
+00:08:56,690 --> 00:09:00,170
+"Si quieres hacerte enemigos,
+intenta cambiar algo".
+
+226
+00:09:00,170 --> 00:09:01,940
+El científico de datos Marcus Adams dice:
+
+227
+00:09:01,940 --> 00:09:04,652
+"Si quieres cometer errores,
+intenta cambiar de entorno".
+
+228
+00:09:04,652 --> 00:09:06,860
+Porque cuando se habla de
+un entorno de producción,
+
+229
+00:09:06,860 --> 00:09:10,830
+implica que también existe
+un entorno de no producción.
+
+230
+00:09:10,830 --> 00:09:13,640
+Y puede tener más o menos
+de lo que se muestra aquí.
+
+231
+00:09:13,640 --> 00:09:15,530
+Ya sabes, tienes dev, test, prod.
+
+232
+00:09:15,530 --> 00:09:17,522
+También puedes tener un
+entorno de control de calidad.
+
+233
+00:09:17,522 --> 00:09:18,980
+Pero lo importante es que quieras
+
+234
+00:09:18,980 --> 00:09:22,490
+separarte de donde estás
+haciendo cambios a donde
+
+235
+00:09:22,490 --> 00:09:24,170
+las personas están usando tu código.
+
+236
+00:09:24,170 --> 00:09:26,540
+No debes probar cosas
+
+237
+00:09:26,540 --> 00:09:29,403
+modificando cosas aquí
+y allá todo el tiempo.
+
+238
+00:09:29,403 --> 00:09:31,070
+Cuando estás en un entorno de producción,
+
+239
+00:09:31,070 --> 00:09:32,840
+tienes un cierto nivel de estabilidad.
+
+240
+00:09:32,840 --> 00:09:34,610
+Y a medida que pasas
+del desarrollo, prueba,
+
+241
+00:09:34,610 --> 00:09:36,860
+a la producción, querrás que
+todo esté más controlado,
+
+242
+00:09:36,860 --> 00:09:39,170
+más probado, más estable.
+
+243
+00:09:39,170 --> 00:09:41,540
+La gente debe poder confiar
+en esta aplicación para
+
+244
+00:09:41,540 --> 00:09:43,392
+estar ahí y trabajar
+de manera consistente.
+
+245
+00:09:43,392 --> 00:09:45,350
+Y diré algo un poco polémico.
+
+246
+00:09:45,350 --> 00:09:47,150
+No hay aplicaciones de producción.
+
+247
+00:09:47,150 --> 00:09:49,730
+Solo hay aplicaciones en
+un entorno de producción.
+
+248
+00:09:49,730 --> 00:09:51,230
+Y en ese entorno de producción, tú
+
+249
+00:09:51,230 --> 00:09:53,390
+tienes que definir sus requisitos.
+
+250
+00:09:53,390 --> 00:09:55,580
+Y esos requisitos provienen de cómo vas
+
+251
+00:09:55,580 --> 00:09:57,660
+a utilizar tu aplicación.
+
+252
+00:09:57,660 --> 00:10:00,020
+Quizás tengas menos requisitos
+
+253
+00:10:00,020 --> 00:10:02,390
+y bajas expectativas, como ir
+
+254
+00:10:02,390 --> 00:10:03,800
+a un show de Carrot Top.
+
+255
+00:10:03,800 --> 00:10:07,170
+Pero para nosotros, que
+lo usamos de manera GMP,
+
+256
+00:10:07,170 --> 00:10:09,950
+tenemos que tener cosas como
+auditorías, tiempos de espera,
+
+257
+00:10:09,950 --> 00:10:11,630
+control estricto de cambios.
+
+258
+00:10:11,630 --> 00:10:14,090
+Lo que quiero decir es,
+sin embargo, que debes huir
+
+259
+00:10:14,090 --> 00:10:18,140
+de esta tierra mítica
+abstracta de producción. ¿Vale?
+
+260
+00:10:18,140 --> 00:10:20,780
+Esto te llevará a discutir si R
+
+261
+00:10:20,780 --> 00:10:22,360
+está listo para la producción.
+
+262
+00:10:22,360 --> 00:10:24,110
+Y te lleva a estos
+aspectos tan específicos
+
+263
+00:10:24,110 --> 00:10:26,660
+que podrás comenzar a
+articular exactamente cómo vas
+
+264
+00:10:26,660 --> 00:10:28,310
+satisfacer estos requisitos.
+
+265
+00:10:28,310 --> 00:10:30,740
+Puedes enfocarte y hacerlo
+
+266
+00:10:30,740 --> 00:10:33,650
+sobre la industrialización y
+generalización de tu código.
+
+267
+00:10:33,650 --> 00:10:35,210
+Y lo que es más importante,
+puedes empezar tratando
+
+268
+00:10:35,210 --> 00:10:39,970
+los siete círculos del infierno
+de la reproducibilidad R.
+
+269
+00:10:39,970 --> 00:10:42,250
+Sé lo que te estás
+preguntando, estás pensando,
+
+270
+00:10:42,250 --> 00:10:46,120
+¿por qué Beelzebub tiene un
+tatuaje de R en el pecho?
+
+271
+00:10:46,120 --> 00:10:47,230
+No lo sé.
+
+272
+00:10:47,230 --> 00:10:49,270
+Asumiría que el señor oscuro estaría más
+
+273
+00:10:49,270 --> 00:10:50,890
+estrechamente asociado con Python.
+
+274
+00:10:50,890 --> 00:10:53,628
+Pero tal vez perdió una apuesta
+ante el arcángel Gabriel.
+
+275
+00:10:53,628 --> 00:10:54,461
+No lo sé.
+
+276
+00:10:54,461 --> 00:10:55,210
+Pero aquí estamos.
+
+277
+00:10:55,210 --> 00:10:57,760
+Y cuando Dante comienza
+su descenso, primero
+
+278
+00:10:57,760 --> 00:10:59,350
+se encuentra la versión del código.
+
+279
+00:10:59,350 --> 00:11:02,230
+Es decir, tu código lo
+escribes y lo mantiene Git.
+
+280
+00:11:02,230 --> 00:11:06,070
+O si no es por Git, esta es
+tu versión final o versión
+
+281
+00:11:06,070 --> 00:11:09,550
+final-final, final-final 2.0.
+
+282
+00:11:09,550 --> 00:11:11,940
+En ese mismo código de nivel superior,
+
+283
+00:11:11,940 --> 00:11:14,103
+dependemos de ciertas
+versiones de paquetes.
+
+284
+00:11:14,103 --> 00:11:15,520
+Estos son tus paquetes de nivel superior.
+
+285
+00:11:15,520 --> 00:11:18,910
+¿Es dplyr 1.0 o dplyr 0.8?
+
+286
+00:11:18,910 --> 00:11:22,510
+Y cada uno de estos paquetes,
+a su vez, tiene dependencias.
+
+287
+00:11:22,510 --> 00:11:24,790
+Y estos son todos los nombres
+a los que realmente no
+
+288
+00:11:24,790 --> 00:11:26,540
+prestas atención mientras se desplazan
+
+289
+00:11:26,540 --> 00:11:28,010
+antes de instalar el paquete
+
+290
+00:11:28,010 --> 00:11:30,370
+BH, Farva, Scales.
+
+291
+00:11:30,370 --> 00:11:33,280
+Cada uno de ellos también
+tiene una versión que requiere.
+
+292
+00:11:33,280 --> 00:11:36,220
+Y todos se ejecutan sobre
+una versión en lenguaje R.
+
+293
+00:11:36,220 --> 00:11:39,730
+¿Estás utilizando R 3.5 o R 4.0?
+
+294
+00:11:39,730 --> 00:11:42,100
+Hubo grandes cambios entre esos.
+
+295
+00:11:42,100 --> 00:11:44,660
+Y bajando, está el entorno de ejecución.
+
+296
+00:11:44,660 --> 00:11:47,170
+Creo que este es el más subestimado.
+
+297
+00:11:47,170 --> 00:11:49,900
+Entonces debes administrar las
+variables de entorno, cosas
+
+298
+00:11:49,900 --> 00:11:51,772
+como la configuración de proxy.
+
+299
+00:11:51,772 --> 00:11:53,230
+Pero también tienes que pensar, que hay
+
+300
+00:11:53,230 --> 00:11:56,350
+diferencias entre ejecutar
+en modo interactivo
+
+301
+00:11:56,350 --> 00:11:58,250
+y funcionar por grupos.
+
+302
+00:11:58,250 --> 00:12:00,430
+Y cuando no tienes acceso a la consola,
+
+303
+00:12:00,430 --> 00:12:01,930
+hay diferencia si estás
+
+304
+00:12:01,930 --> 00:12:04,120
+ejecutando tu aplicación desde RStudio
+
+305
+00:12:04,120 --> 00:12:06,070
+o ejecutándola en el servidor Shiny.
+
+306
+00:12:06,070 --> 00:12:08,980
+A partir de ahí, también
+tienes dependencias externas.
+
+307
+00:12:08,980 --> 00:12:10,930
+Estas son sus bibliotecas de sistemas.
+
+308
+00:12:10,930 --> 00:12:13,600
+Piensa en intentar instalar rJava.
+
+309
+00:12:13,600 --> 00:12:16,203
+También debes tener ese JDK instalado.
+
+310
+00:12:16,203 --> 00:12:17,620
+O si alguna vez has tenido el placer
+
+311
+00:12:17,620 --> 00:12:19,390
+de intentar instalar LaTeX para asegurarte
+
+312
+00:12:19,390 --> 00:12:21,760
+de que puedes generar
+esos informes en PDF.
+
+313
+00:12:21,760 --> 00:12:25,900
+Luego, el círculo más interno
+es nuestro sistema operativo.
+
+314
+00:12:25,900 --> 00:12:29,860
+El código se ejecuta
+diferente entre Windows y Mac,
+
+315
+00:12:29,860 --> 00:12:33,100
+entre Mac y Linux, y Linux y Windows.
+
+316
+00:12:33,100 --> 00:12:34,608
+Por eso, algunos paquetes no funcionan
+
+317
+00:12:34,608 --> 00:12:36,367
+en todos los sistemas operativos.
+
+318
+00:12:36,367 --> 00:12:39,260
+Un ejemplo simple sería
+que usan una ruta diferente
+
+319
+00:12:39,260 --> 00:12:40,465
+separadores
+
+320
+00:12:40,465 --> 00:12:42,910
+una barra invertida o una
+barra inclinada hacia adelante.
+
+321
+00:12:42,910 --> 00:12:44,680
+Pero también hay cosas más sutiles,
+
+322
+00:12:44,680 --> 00:12:47,080
+como cómo renderizan visualizaciones.
+
+323
+00:12:47,080 --> 00:12:50,860
+Y puedo decirte que enfrentamos
+cada uno de estos círculos
+
+324
+00:12:50,860 --> 00:12:52,390
+en nuestro viaje.
+
+325
+00:12:52,390 --> 00:12:56,140
+Pero te daré un ejemplo ahora.
+
+326
+00:12:56,140 --> 00:12:59,050
+Aquí hay algunos gráficos
+de control maravillosos.
+
+327
+00:12:59,050 --> 00:13:01,180
+A la izquierda tenemos la versión
+
+328
+00:13:01,180 --> 00:13:02,710
+del servidor de desarrollo.
+
+329
+00:13:02,710 --> 00:13:06,310
+A la derecha, la versión en
+nuestro servidor de prueba:
+
+330
+00:13:06,310 --> 00:13:09,580
+código idéntico, pero sin
+errores, sin advertencias,
+
+331
+00:13:09,580 --> 00:13:12,580
+y lo más importante, ninguna
+línea verde oscuro brillante
+
+332
+00:13:12,580 --> 00:13:14,870
+que señale el significado de los datos.
+
+333
+00:13:14,870 --> 00:13:18,730
+Ahora quiero señalar que
+este es un espacio oscuro.
+
+334
+00:13:18,730 --> 00:13:19,563
+Línea verde.
+
+335
+00:13:19,563 --> 00:13:21,247
+Y eso es importante porque oficialmente,
+
+336
+00:13:21,247 --> 00:13:22,730
+no debería haber un espacio allí.
+
+337
+00:13:22,730 --> 00:13:26,107
+Sin embargo, usamos
+este código durante años
+
+338
+00:13:26,107 --> 00:13:28,690
+incluso antes de implementarlo
+en el servidor de desarrollo,
+
+339
+00:13:28,690 --> 00:13:29,780
+Y funcionó.
+
+340
+00:13:29,780 --> 00:13:31,280
+Así que debes preguntarte
+
+341
+00:13:31,280 --> 00:13:34,600
+¿Cómo un solo espacio representa
+una amenaza tan existencial
+
+342
+00:13:34,600 --> 00:13:36,310
+a nuestra aplicación?
+
+343
+00:13:36,310 --> 00:13:40,850
+Como muchas cosas en la vida,
+el tiempo es fundamental.
+
+344
+00:13:40,850 --> 00:13:43,900
+Cuando especificas requisitos de versión
+
+345
+00:13:43,900 --> 00:13:47,470
+para tus paquetes, todo lo
+que viene después de eso
+
+346
+00:13:47,470 --> 00:13:51,670
+se asienta en estas
+superposiciones cuánticas.
+
+347
+00:13:51,670 --> 00:13:53,740
+Las versiones reales que se instalarán
+
+348
+00:13:53,740 --> 00:13:57,290
+no instala realmente esos paquetes.
+
+349
+00:13:57,290 --> 00:14:02,290
+Así nuestro paquete ppxqc
+dependió de ggplot2, por supuesto.
+
+350
+00:14:03,370 --> 00:14:06,130
+Que, a su vez, requería escalas.
+
+351
+00:14:06,130 --> 00:14:11,130
+Antes del 19 de noviembre de
+2019, se arregló a escala 1.0.0
+
+352
+00:14:15,280 --> 00:14:18,100
+Eso podría controlar nuestro
+espacio verde oscuro.
+
+353
+00:14:18,100 --> 00:14:23,100
+Después del 19 de noviembre
+de 2019, se arregló
+
+354
+00:14:23,410 --> 00:14:26,050
+a escala 1.1.0 Y eso cambió
+cómo tradujo esa secuencia
+
+355
+00:14:26,050 --> 00:14:28,660
+en un valor numérico para
+representar ese color
+
+356
+00:14:28,660 --> 00:14:32,490
+y rompió la compatibilidad
+con versiones anteriores.
+
+357
+00:14:32,490 --> 00:14:36,630
+Lo implementamos para probar a
+finales de noviembre de 2019.
+
+358
+00:14:36,630 --> 00:14:40,230
+Ahora lo captamos porque hicimos
+pruebas, como deberíamos.
+
+359
+00:14:40,230 --> 00:14:42,090
+Pero te diré que Packrat no era
+
+360
+00:14:42,090 --> 00:14:43,440
+suficiente para detectar esto.
+
+361
+00:14:43,440 --> 00:14:44,550
+Nosotros lo intentamos.
+
+362
+00:14:44,550 --> 00:14:46,770
+Lo que realmente necesitamos
+aquí son capturas de CRAN,
+
+363
+00:14:46,770 --> 00:14:49,350
+ya sea de las instantáneas
+CRAN de Microsoft,
+
+364
+00:14:49,350 --> 00:14:53,130
+administrador de paquetes
+Rstudio, o capturas internas
+
+365
+00:14:53,130 --> 00:14:55,710
+de CRAN. Y dar la cereza
+encima de esto y un testamento
+
+366
+00:14:55,710 --> 00:14:58,050
+a los grandes mantenedores de paquetes,
+
+367
+00:14:58,050 --> 00:15:00,570
+el problema solo existió
+alrededor de un mes.
+
+368
+00:15:00,570 --> 00:15:02,430
+A mediados de enero, se resolvió.
+
+369
+00:15:02,430 --> 00:15:05,250
+La moraleja de esto es que
+no lo despliegues temprano.
+
+370
+00:15:05,250 --> 00:15:08,570
+Deja que el mantenimiento
+lo arregle todo primero.
+
+371
+00:15:08,570 --> 00:15:10,610
+Por último, si
+
+372
+00:15:10,610 --> 00:15:13,820
+no puedes ejecutar tu
+aplicación sin una intervención
+
+373
+00:15:13,820 --> 00:15:16,060
+directa, para empezar,
+nunca fue una aplicación.
+
+374
+00:15:16,060 --> 00:15:18,550
+Tu aplicación sufrirá
+las lanzas y las flechas
+
+375
+00:15:18,550 --> 00:15:19,790
+de indignante fortuna.
+
+376
+00:15:19,790 --> 00:15:22,810
+Y con eso, me refiero a la
+disparatada aportación que nunca
+
+377
+00:15:22,810 --> 00:15:25,270
+esperaste que los usuarios tendrían.
+
+378
+00:15:25,270 --> 00:15:29,270
+Como... 12 dígitos de
+precisión... tu código
+
+379
+00:15:29,270 --> 00:15:32,930
+tiene que ser robusto para
+sobrevivir a los mil choques
+
+380
+00:15:32,930 --> 00:15:34,280
+naturales de los que la
+aplicación es heredera.
+
+381
+00:15:34,280 --> 00:15:37,550
+Y tiene que hacerlo sin
+tu intervención directa.
+
+382
+00:15:37,550 --> 00:15:39,560
+Pero solo porque no puedas
+intervenir directamente
+
+383
+00:15:39,560 --> 00:15:43,280
+no significa que la
+aplicación no pueda recopilar
+
+384
+00:15:43,280 --> 00:15:45,290
+información por ti. En primer lugar, log.
+
+385
+00:15:45,290 --> 00:15:47,270
+Hay muchos programas por ahí
+
+386
+00:15:47,270 --> 00:15:52,270
+que te ayudan con:
+futile.logger, log4r, logging.
+
+387
+00:15:52,430 --> 00:15:55,610
+Una cosa es registrar errores
+en el seguimiento de la pila,
+
+388
+00:15:55,610 --> 00:15:58,100
+pero también debes tener contexto.
+
+389
+00:15:58,100 --> 00:16:00,410
+Tu aplicación es como un niño.
+
+390
+00:16:00,410 --> 00:16:02,300
+No quieres que loa
+profesores te llamen solo
+
+391
+00:16:02,300 --> 00:16:03,380
+cuando pasa algo malo.
+
+392
+00:16:03,380 --> 00:16:04,940
+Quieres saber las cosas buenas que pasan.
+
+393
+00:16:04,940 --> 00:16:06,410
+Quieres saber cómo lo usa la gente.
+
+394
+00:16:06,410 --> 00:16:07,452
+¿Qué están enviando?
+
+395
+00:16:07,452 --> 00:16:10,680
+¿Cuáles son las consultas
+que están haciendo?
+
+396
+00:16:10,680 --> 00:16:11,970
+¿Y sabes qué?
+
+397
+00:16:11,970 --> 00:16:13,545
+Es como tu hijo.
+
+398
+00:16:13,545 --> 00:16:15,670
+Realmente es porque pones
+mucho trabajo en ello.
+
+399
+00:16:15,670 --> 00:16:18,480
+Y así, como un buen niño,
+haz que sea su hogar también.
+
+400
+00:16:18,480 --> 00:16:22,230
+Utiliza elementos como Google
+Analytics para saber quién
+
+401
+00:16:22,230 --> 00:16:24,780
+y dónde se utiliza la aplicación.
+
+402
+00:16:24,780 --> 00:16:28,710
+Las etiquetas de Google
+Analytics son simples para copiar
+
+403
+00:16:28,710 --> 00:16:30,540
+algo de JavaScript en tu
+código de IU, y luego puedes
+
+404
+00:16:30,540 --> 00:16:33,330
+ver los análisis sobre cómo
+se está utilizando el código.
+
+405
+00:16:33,330 --> 00:16:34,850
+Puedes ver los picos máximos.
+
+406
+00:16:34,850 --> 00:16:37,350
+en qué época del año se está
+utilizando esta aplicación.
+
+407
+00:16:37,350 --> 00:16:41,220
+Tal vez debas ampliar tus
+servidores de producción.
+
+408
+00:16:41,220 --> 00:16:42,930
+Y, por último, es posible que debas
+
+409
+00:16:42,930 --> 00:16:46,005
+adaptar la aplicación a su entorno.
+
+410
+00:16:46,005 --> 00:16:47,700
+Hay algunos paquetes geniales por ahí
+
+411
+00:16:47,700 --> 00:16:49,230
+que te permiten hacerlo.
+
+412
+00:16:49,230 --> 00:16:52,080
+El paquete config y secrets
+hace precisamente eso.
+
+413
+00:16:52,080 --> 00:16:54,332
+En un ejemplo simple,
+puedes... para nosotros,
+
+414
+00:16:54,332 --> 00:16:56,790
+necesitábamos mostrar un
+banner en nuestros entornos de
+
+415
+00:16:56,790 --> 00:16:58,500
+desarrollo y prueba, esto
+no es para uso oficial.
+
+416
+00:16:58,500 --> 00:17:01,170
+Más complejo fue la gestión de contraseñas
+
+417
+00:17:01,170 --> 00:17:02,550
+entre los ambientes.
+
+418
+00:17:02,550 --> 00:17:04,920
+En cada uno de nuestros entornos,
+
+419
+00:17:04,920 --> 00:17:06,714
+teníamos una cuenta de servicio.
+
+420
+00:17:06,714 --> 00:17:08,339
+Y esa cuenta de servicio
+tenía una contraseña que
+
+421
+00:17:08,339 --> 00:17:11,339
+se conectaba a una base de
+datos diferente en cada entorno.
+
+422
+00:17:11,339 --> 00:17:13,230
+Y nuestro entorno de desarrollo no debería
+
+423
+00:17:13,230 --> 00:17:16,050
+tener acceso a la base de datos
+del entorno de producción.
+
+424
+00:17:16,050 --> 00:17:18,450
+Y el entorno de producción
+no debería tener acceso
+
+425
+00:17:18,450 --> 00:17:20,040
+a la base de datos de desarrollo.
+
+426
+00:17:20,040 --> 00:17:21,839
+Además, era un requisito de seguridad
+
+427
+00:17:21,839 --> 00:17:25,829
+que no pudiéramos almacenar
+contraseñas en texto sin cifrar.
+
+428
+00:17:25,829 --> 00:17:27,300
+Y diré que las credenciales
+
+429
+00:17:27,300 --> 00:17:30,390
+y la gestión de secretos
+es un tema muy profundo.
+
+430
+00:17:30,390 --> 00:17:32,440
+No soy, de ninguna
+manera, un experto en eso.
+
+431
+00:17:32,440 --> 00:17:35,910
+Solo compartiré lo que hicimos
+porque esa solución estuvo
+
+432
+00:17:35,910 --> 00:17:37,800
+inspirada en una conversación
+que tuve en el pasillo
+
+433
+00:17:37,800 --> 00:17:40,290
+con el propio R-Podcaster, Eric Nantz,
+
+434
+00:17:40,290 --> 00:17:43,740
+en R/Pharma 2019.
+
+435
+00:17:43,740 --> 00:17:47,230
+Cuando nuestro cliente, la
+UI, contacta con nuestro
+
+436
+00:17:47,230 --> 00:17:52,140
+miramos la URL solicitada,
+específicamente el subdominio.
+
+437
+00:17:52,140 --> 00:17:53,850
+Y esto es genial porque en realidad
+
+438
+00:17:53,850 --> 00:17:56,760
+tener varios servidores de
+producción en una aplicación
+
+439
+00:17:56,760 --> 00:17:57,660
+equilibradora de carga.
+
+440
+00:17:57,660 --> 00:17:59,340
+Entonces, al mirar ese subdominio,
+
+441
+00:17:59,340 --> 00:18:00,873
+¿Es un desarrollo shiny, pruebas shinys
+
+442
+00:18:00,873 --> 00:18:02,548
+o simplemente shiny
+
+443
+00:18:02,548 --> 00:18:04,000
+para un entorno de producción?
+
+444
+00:18:04,000 --> 00:18:05,730
+Luego podemos usar el
+paquete de configuración
+
+445
+00:18:05,730 --> 00:18:09,060
+para tomar los parámetros
+correctos de un archivo YAML.
+
+446
+00:18:09,060 --> 00:18:14,060
+Para nosotros, ese es el ID
+de la cuenta de servicio,
+
+447
+00:18:14,160 --> 00:18:16,020
+la base de datos a la
+que debemos conectarnos,
+
+448
+00:18:16,020 --> 00:18:18,390
+y el nombre del secreto
+en nuestra caja fuerte
+
+449
+00:18:18,390 --> 00:18:20,070
+que contiene la contraseña.
+
+450
+00:18:20,070 --> 00:18:22,950
+Hemos cifrado esas
+contraseñas en la caja fuerte.
+
+451
+00:18:22,950 --> 00:18:26,610
+Y con las claves SSH privadas
+individuales del servidor,
+
+452
+00:18:26,610 --> 00:18:28,740
+pueden descifrar esa contraseña y usarla
+
+453
+00:18:28,740 --> 00:18:32,430
+para tomar los datos de
+la base de datos correcta.
+
+454
+00:18:32,430 --> 00:18:36,240
+Esto es realmente útil porque
+
+455
+00:18:36,240 --> 00:18:39,870
+podemos cifrar la contraseña
+y comprometerla con nuestro
+
+456
+00:18:39,870 --> 00:18:41,220
+repositorio de Git.
+
+457
+00:18:41,220 --> 00:18:43,980
+Solo unos pocos desarrolladores
+necesitan conocerlas.
+
+458
+00:18:43,980 --> 00:18:47,100
+Y solo esos servidores,
+cuando los implementamos,
+
+459
+00:18:47,100 --> 00:18:49,440
+deberían poder acceder a esas contraseñas.
+
+460
+00:18:49,440 --> 00:18:52,530
+Para rotarlas, solo hacemos
+una solicitud de extracción
+
+461
+00:18:52,530 --> 00:18:54,840
+con la contraseña actualizada,
+que se puede implementar
+
+462
+00:18:54,840 --> 00:18:56,940
+al servidor adecuado.
+
+463
+00:18:56,940 --> 00:18:57,773
+Y lo entiendo.
+
+464
+00:18:57,773 --> 00:19:01,310
+La gestión de contraseñas
+no es emocionante.
+
+465
+00:19:01,310 --> 00:19:03,110
+Pero desplegar sí lo es.
+
+466
+00:19:03,110 --> 00:19:04,220
+Vale totalmente la pena.
+
+467
+00:19:04,220 --> 00:19:06,530
+Y lo admito, mi cabeza se
+sacude cada vez que escucho
+
+468
+00:19:06,530 --> 00:19:09,560
+la palabra producción en el
+título de una presentación.
+
+469
+00:19:09,560 --> 00:19:12,590
+Llegar allí no es todo
+procesamiento del lenguaje natural
+
+470
+00:19:12,590 --> 00:19:13,970
+y bosque aleatorio.
+
+471
+00:19:13,970 --> 00:19:16,760
+Con suerte, ya te habrás dado
+cuenta de que la mayor parte
+
+472
+00:19:16,760 --> 00:19:18,230
+no está.
+
+473
+00:19:18,230 --> 00:19:20,660
+De lo que he hablado hoy realmente solo
+
+474
+00:19:20,660 --> 00:19:22,040
+araña la superficie.
+
+475
+00:19:22,040 --> 00:19:25,610
+Sin embargo, debes saber
+que puedes usar R y shiny
+
+476
+00:19:25,610 --> 00:19:27,030
+en un entorno de producción.
+
+477
+00:19:27,030 --> 00:19:29,450
+Ni siquiera somos los primeros en hacerlo.
+
+478
+00:19:29,450 --> 00:19:32,240
+El año pasado, Heather y Jacqueline Nolis
+
+479
+00:19:32,240 --> 00:19:35,640
+en RStudio::conf hablaron
+sobre cómo lo hace T-Mobile.
+
+480
+00:19:35,640 --> 00:19:39,420
+Somos un ejemplo más
+de cómo puedes hacerlo.
+
+481
+00:19:39,420 --> 00:19:41,120
+Y si es necesario, namedrop.
+
+482
+00:19:41,120 --> 00:19:42,890
+Somos una empresa de Fortune 500.
+
+483
+00:19:42,890 --> 00:19:46,810
+Y lo estamos usando para un
+importante proceso de informes.
+
+484
+00:19:46,810 --> 00:19:50,080
+Mira, poner en producción
+una aplicación shiny
+
+485
+00:19:50,080 --> 00:19:54,650
+es como jugar al viejo
+juego de The Oregon Trail.
+
+486
+00:19:54,650 --> 00:19:57,100
+Ahora no está garantizado el éxito.
+
+487
+00:19:57,100 --> 00:19:58,360
+Puede que no sea bonito.
+
+488
+00:19:58,360 --> 00:19:59,860
+Y puede ser difícil.
+
+489
+00:19:59,860 --> 00:20:00,980
+Pero puede hacerse.
+
+490
+00:20:00,980 --> 00:20:02,920
+Otros lo han hecho antes que tú.
+
+491
+00:20:02,920 --> 00:20:05,860
+Solo necesitas descubrir cómo hacerlo.
+
+492
+00:20:05,860 --> 00:20:08,140
+Y por supuesto, evita la disentería.
+
+493
+00:20:08,140 --> 00:20:10,990
+Pero ese es un buen consejo,
+incluso más allá del desarrollo
+
+494
+00:20:10,990 --> 00:20:12,400
+de aplicaciones shinys.
+
+495
+00:20:12,400 --> 00:20:15,850
+Y como esos pioneros que
+cruzan las Montañas Rocosas,
+
+496
+00:20:15,850 --> 00:20:20,850
+nosotros también hemos cruzado,
+hemos descubierto cómo,
+
+497
+00:20:21,310 --> 00:20:24,310
+y llegado a la cima de
+la montaña de producción.
+
+498
+00:20:24,310 --> 00:20:27,250
+Y mientras contemplamos esta vista,
+
+499
+00:20:27,250 --> 00:20:29,600
+Te dejo con estas palabras.
+
+500
+00:20:29,600 --> 00:20:31,810
+No siempre puedes
+codificar lo que quieres,
+
+501
+00:20:31,810 --> 00:20:34,300
+pero si construyes a
+veces puedes simplemente
+
+502
+00:20:34,300 --> 00:20:38,110
+encontrar el código que necesitas.
+
+503
+00:20:38,110 --> 00:20:39,220
+Gracias por tu tiempo.
+
+504
+00:20:39,220 --> 00:20:41,860
+Espero que hayas obtenido
+algo de esta charla.
+
+505
+00:20:41,860 --> 00:20:44,110
+Y espero que disfrutes el
+resto de la conferencia.
+
+506
+00:20:44,110 --> 00:20:45,860
+Gracias.
+
