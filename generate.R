@@ -7,11 +7,16 @@ source("_parse.R")
 source("_frame.R")
 
 generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
+
+  # The output path is the input path with .srt => .mp4
   output_file <- paste0(tools::file_path_sans_ext(srt_file), ".mp4")
+
+  # If the output file exists, we bail if ovewrite=FALSE
   if (file.exists(output_file)) {
     if (isFALSE(overwrite)) {
       return(FALSE)
     } else if (overwrite == "auto") {
+      # Only bail if output is up-to-date
       srt_mtime <- file.info(srt_file)$mtime
       out_mtime <- file.info(output_file)$mtime
       if (out_mtime >= srt_mtime) {
@@ -20,47 +25,55 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
     }
   }
 
+  # Data frame with `n` (int), `start`/`end` (in secs), and `text`
   df <- read_srt(srt_file)
 
   if (identical(duration, "00:00")) {
-    # Last caption + 1 second
+    # Auto-detect duration; set it to last caption + 1 second
     duration <- max(df$end) + 1
   } else {
+    # Convert "mm:ss" to seconds
     duration <- period_to_seconds(ms(duration))
   }
 
+  # The overall strategy is to create one .png for each caption (dozens), plus
+  # one blank .png, inside captions_dir.
+  #
+  # Then populate frames_dir with one softlink per output frame (thousands), and
+  # use ffmpeg to convert frames_dir to a video.
+
+  # Create these dirs using tempfile so we can simultaneously run multiple jobs
+  # if we want to
   captions_dir <- tempfile("caption_images")
   frames_dir <- tempfile("frames")
 
-  unlink(captions_dir, recursive = TRUE)
   dir.create(captions_dir)
-  unlink(frames_dir, recursive = TRUE)
   dir.create(frames_dir)
+  # Don't on.exit(unlink) in case the files are needed for debugging
 
   message("  Generating frames")
   text_to_frame("", file.path(captions_dir, "blank.png"))
-  # pb <- progress_bar$new(total = nrow(df))
   for (i in seq_len(nrow(df))) {
-    # pb$tick()
     text_to_frame(df$text[i], file.path(captions_dir, paste0(df$n[i], ".png")))
   }
 
   fps <- 24
 
   message("  Linking")
-  # pb <- progress_bar$new(total = duration)
   for (sec in 0:(duration - 1)) {
-    # pb$tick()
     for (frame in 0:(fps - 1)) {
       abs_frame <- sec * fps + frame
       secs <- abs_frame / fps
 
       dest <- file.path(frames_dir, sprintf("frame%08d.png", abs_frame))
 
+      # Determine which caption png should be used for this frame
       row <- which(df$start <= secs & df$end >= secs)
       if (length(row) == 0) {
+        # No caption matched, use blank
         src <- file.path(captions_dir, "blank.png")
       } else  {
+        # One or more captions matched, use the first result
         src <- file.path(captions_dir, paste0(df$n[[row[1]]], ".png"))
       }
 
@@ -70,22 +83,15 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
 
   message("  Rendering")
   tryCatch({
-    # system(paste0("ffmpeg -hide_banner -loglevel warning -nostats ",
-    #   " -y -r 24 -s 1920x360 -i ",
-    #   shQuote(file.path(frames_dir, "frame%08d.png"), "sh"), " ",
-    #   "-vcodec libx264 -crf 25 -pix_fmt yuv420p ",
-    #   shQuote(output_file, "sh")))
     res <- processx::run("ffmpeg", c(
-      "-hide_banner",
-      "-loglevel", "warning",
-      "-nostats",
-      "-y",
-      "-r", "24",
-      "-s", "1920x360",
-      "-i", file.path(frames_dir, "frame%08d.png"),
-      "-vcodec", "libx264",
-      "-crf", "25",
-      "-pix_fmt", "yuv420p",
+      "-hide_banner", "-loglevel", "warning",       # Squelch output
+      "-nostats",                                   # Don't show progress
+      "-y",                                         # Don't prompt for overwrite
+      "-r", "24",                                   # Framerate
+      "-s", "1920x360",                             # Resolution
+      "-i", file.path(frames_dir, "frame%08d.png"), # Input file
+      "-vcodec", "libx264", "-crf", "25",           # Set codec and parameter
+      "-pix_fmt", "yuv420p",                        # Output pixel format
       output_file
     ), echo_cmd = FALSE, echo = TRUE)
     message("Wrote ", output_file)
