@@ -7,7 +7,13 @@ text_to_frame <- function(text, file, width = 1920, height = 360,
   par(mar = c(0,0,0,0))
   plot.new()
 
-  par(cex = 6, family = "Source Sans Pro", col = fg)
+  family <- "Source Sans Pro"
+  if (grepl("darwin", R.version$os)) {
+    if (is.na(iconv(text, to = "latin1"))) {
+      family <- "PingFang SC"
+    }
+  }
+  par(cex = 6, family = family, col = fg)
 
   # Detect clipping
   if (strwidth(text, "figure") > 1 || strheight(text, "figure") > 1) {
