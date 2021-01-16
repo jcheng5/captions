@@ -1,0 +1,2002 @@
+﻿1
+00:00:05,471 --> 00:00:07,568
+Monitorizar la salud, impacto
+de proyectos de código abierto
+
+2
+00:00:07,568 --> 00:00:08,830
+Buenos días.
+
+3
+00:00:08,830 --> 00:00:10,490
+Dejad que empiece con una pregunta.
+
+4
+00:00:10,490 --> 00:00:13,300
+¿Qué crees que es lo
+más importante de usar R
+
+5
+00:00:13,300 --> 00:00:15,040
+adecuadamente?
+
+6
+00:00:15,040 --> 00:00:17,380
+¿Es ser capaz de escribir
+código que funcione bien?
+
+7
+00:00:17,380 --> 00:00:19,750
+¿O crear hermosos gráficos, aprender
+
+8
+00:00:19,750 --> 00:00:21,910
+a escribir paquetes de R?
+
+9
+00:00:21,910 --> 00:00:23,200
+Esta es mi opinión.
+
+10
+00:00:23,200 --> 00:00:26,800
+Creo que lo más importante
+de usar R adecuadamente
+
+11
+00:00:26,800 --> 00:00:30,280
+es poder encontrar y elegir
+las herramientas adecuadas para
+
+12
+00:00:30,280 --> 00:00:32,090
+el trabajo que hagamos.
+
+13
+00:00:32,090 --> 00:00:34,600
+Creo que muchos proyectos de
+datos científicos se detienen
+
+14
+00:00:34,600 --> 00:00:36,700
+o no tienen tanto éxito
+
+15
+00:00:36,700 --> 00:00:40,750
+como podrían, porque eligen
+herramientas equivocadas
+
+16
+00:00:40,750 --> 00:00:42,610
+sobre las que apoyarse.
+
+17
+00:00:42,610 --> 00:00:44,630
+Una vez eliges una herramienta,
+
+18
+00:00:44,630 --> 00:00:47,510
+puede ser difícil volver y solucionarlo.
+
+19
+00:00:47,510 --> 00:00:48,940
+Me llamo Jeroen Ooms.
+
+20
+00:00:48,940 --> 00:00:51,280
+He escrito varios paquetes de R, algunos
+
+21
+00:00:51,280 --> 00:00:52,450
+quizás los hayas usado.
+
+22
+00:00:52,450 --> 00:00:54,700
+También mantengo las compilaciones
+
+23
+00:00:54,700 --> 00:00:57,790
+y la infraestructura de R en Windows.
+
+24
+00:00:57,790 --> 00:01:01,840
+Soy miembro del grupo
+rOpenSci en la UC de Berkeley.
+
+25
+00:01:01,840 --> 00:01:03,550
+Dentro de rOpenSci, trabajamos
+
+26
+00:01:03,550 --> 00:01:07,030
+en un nuevo y ambicioso
+proyecto, R-universe.
+
+27
+00:01:07,030 --> 00:01:10,240
+En esencia, R-universe
+es una plataforma abierta
+
+28
+00:01:10,240 --> 00:01:13,090
+basada en Git para gestionar
+depósitos de paquetes
+
+29
+00:01:13,090 --> 00:01:14,440
+personales de R.
+
+30
+00:01:14,440 --> 00:01:16,750
+Significa que una vez
+registras los paquetes,
+
+31
+00:01:16,750 --> 00:01:18,850
+el sistema crea automáticamente binarios
+
+32
+00:01:18,850 --> 00:01:22,600
+y documentación y demás desde Git cada vez
+
+33
+00:01:22,600 --> 00:01:26,380
+que el autor actualiza el paquete.
+
+34
+00:01:26,380 --> 00:01:28,640
+Pueden ser paquetes de R, pero también
+
+35
+00:01:28,640 --> 00:01:31,960
+de CRAN o Bioconductor o
+tus paquetes personales.
+
+36
+00:01:31,960 --> 00:01:34,210
+Y no importa siempre que el código abierto
+
+37
+00:01:34,210 --> 00:01:37,690
+esté disponible en Git.
+
+38
+00:01:37,690 --> 00:01:40,240
+Sin embargo, publicar paquetes no es
+
+39
+00:01:40,240 --> 00:01:42,460
+la meta de este proyecto.
+
+40
+00:01:42,460 --> 00:01:45,520
+Lo más importante es
+que supone un comienzo
+
+41
+00:01:45,520 --> 00:01:50,110
+para experimentar con los
+cálculos de métricas, y mostrar
+
+42
+00:01:50,110 --> 00:01:53,470
+información secundaria sobre un paquete
+
+43
+00:01:53,470 --> 00:01:57,160
+que quizás nos diga algo
+sobre la salud y el papel
+
+44
+00:01:57,160 --> 00:02:00,050
+y el impacto de un proyecto en particular.
+
+45
+00:02:00,050 --> 00:02:01,500
+Hacia el final de esta charla,
+
+46
+00:02:01,500 --> 00:02:04,660
+explicaré brevemente qué hace R-universe
+
+47
+00:02:04,660 --> 00:02:06,460
+y de dónde viene.
+
+48
+00:02:06,460 --> 00:02:09,940
+Hoy, sobre todo, quiero
+hablaros de por qué
+
+49
+00:02:09,940 --> 00:02:12,700
+creo que es importante
+tener mejores herramientas
+
+50
+00:02:12,700 --> 00:02:15,340
+y monitorizar el estado y la salud
+
+51
+00:02:15,340 --> 00:02:17,350
+de los software de búsqueda.
+
+52
+00:02:17,350 --> 00:02:19,990
+Porque creo que hay
+diferencias importantes
+
+53
+00:02:19,990 --> 00:02:21,850
+entre usar software de código abierto
+
+54
+00:02:21,850 --> 00:02:26,260
+y software comercial que
+no siempre son obvias.
+
+55
+00:02:26,260 --> 00:02:28,840
+En particular, cuando
+se trata de expectativas
+
+56
+00:02:28,840 --> 00:02:31,900
+sobre la calidad y el ciclo de vida
+
+57
+00:02:31,900 --> 00:02:36,260
+y la participación en
+proyectos de código abierto.
+
+58
+00:02:36,260 --> 00:02:39,880
+Espero que os haga reflexionar sobre cosas
+
+59
+00:02:39,880 --> 00:02:42,670
+que quizás queráis considerar
+cuando uséis software
+
+60
+00:02:42,670 --> 00:02:46,270
+de código abierto, e
+indicadores necesarios
+
+61
+00:02:46,270 --> 00:02:48,740
+en un proyecto saludable.
+
+62
+00:02:48,740 --> 00:02:52,225
+¿Cómo descubrimos y elegimos
+los mejores paquetes R?
+
+63
+00:02:52,225 --> 00:02:54,467
+Dado que R es increíble, y que
+se pueden hacer muchas cosas
+
+64
+00:02:54,467 --> 00:02:55,443
+con él.
+
+65
+00:02:55,443 --> 00:02:57,850
+Y hay muy pocas reglas o límites.
+
+66
+00:02:57,850 --> 00:03:00,400
+Pero también hace que el ecosistema de R
+
+67
+00:03:00,400 --> 00:03:03,460
+a veces sea como el Lejano
+Oeste del software de búsqueda,
+
+68
+00:03:03,460 --> 00:03:05,860
+y que sea muy difícil
+encontrar las partes buenas,
+
+69
+00:03:05,860 --> 00:03:08,920
+que sea difícil saber si algo es de fiar.
+
+70
+00:03:08,920 --> 00:03:10,660
+Supongamos que eres científico analista,
+
+71
+00:03:10,660 --> 00:03:12,400
+y necesitas hacer un análisis particular,
+
+72
+00:03:12,400 --> 00:03:15,130
+o necesitas leer un formato
+de archivo en particular,
+
+73
+00:03:15,130 --> 00:03:19,270
+o necesitas un cliente HTTP
+con interfaz para servidores
+
+74
+00:03:19,270 --> 00:03:22,690
+de webs de datos abiertos,
+¿cómo lo encuentras?
+
+75
+00:03:22,690 --> 00:03:24,760
+¿Y cómo sabes si te sirve?
+
+76
+00:03:24,760 --> 00:03:27,040
+O quizás encuentras un artículo o un blog
+
+77
+00:03:27,040 --> 00:03:29,158
+que menciona un paquete interesante.
+
+78
+00:03:29,158 --> 00:03:30,325
+Así que lees la descripción.
+
+79
+00:03:30,325 --> 00:03:32,417
+O ejecutas un ejemplo.
+
+80
+00:03:32,417 --> 00:03:33,375
+Parece funcionar.
+
+81
+00:03:33,375 --> 00:03:35,860
+Problema solucionado, ¿no?
+
+82
+00:03:35,860 --> 00:03:38,620
+Como seguramente sepas, cualquiera
+puede crear un paquete R.
+
+83
+00:03:38,620 --> 00:03:40,515
+Pones tu código en el formato correcto.
+
+84
+00:03:40,515 --> 00:03:41,890
+Y lo subes a GitHub
+
+85
+00:03:41,890 --> 00:03:43,410
+o lo envías a CRAN.
+
+86
+00:03:43,410 --> 00:03:45,910
+Y CRAN comprueba si el
+paquete puede instalarse
+
+87
+00:03:45,910 --> 00:03:48,640
+en Windows y Mac y
+Linux. Y que no infrinja
+
+88
+00:03:48,640 --> 00:03:50,230
+sus políticas.
+
+89
+00:03:50,230 --> 00:03:51,770
+Pero ya está.
+
+90
+00:03:51,770 --> 00:03:54,790
+No hay más valoración sobre
+
+91
+00:03:54,790 --> 00:03:57,453
+el contenido del paquete R.
+
+92
+00:03:57,453 --> 00:03:59,620
+Esto hace que el código
+abierto sea genial,
+
+93
+00:03:59,620 --> 00:04:01,930
+porque todos pueden participar.
+
+94
+00:04:01,930 --> 00:04:06,930
+Pero, obviamente, la calidad
+de las contribuciones varía.
+
+95
+00:04:07,090 --> 00:04:10,240
+Y lo que es, quizás,
+menos obvio al principio
+
+96
+00:04:10,240 --> 00:04:12,670
+es que los diferentes autores de paquetes
+
+97
+00:04:12,670 --> 00:04:14,890
+tienen ideas muy diferentes sobre
+
+98
+00:04:14,890 --> 00:04:18,430
+qué puedes esperar de ellos
+en cuanto a mantenimiento,
+
+99
+00:04:18,430 --> 00:04:20,899
+soporte y participación.
+
+100
+00:04:20,899 --> 00:04:22,930
+Y estas cosas son más relevantes
+
+101
+00:04:22,930 --> 00:04:25,300
+cuando empiezas a usar R más en serio.
+
+102
+00:04:25,300 --> 00:04:27,520
+Por supuesto, cuando estás jugando
+
+103
+00:04:27,520 --> 00:04:29,830
+para un trabajo de clase
+o un problema puntual,
+
+104
+00:04:29,830 --> 00:04:32,840
+puedes hacer lo que funcione y punto.
+
+105
+00:04:32,840 --> 00:04:36,010
+Pero si comienzas a
+depender de un paquete,
+
+106
+00:04:36,010 --> 00:04:38,120
+la dinámica cambia un poco.
+
+107
+00:04:38,120 --> 00:04:40,060
+Supón que vas a construir un paquete R
+
+108
+00:04:40,060 --> 00:04:42,850
+en el informe de tu tesis
+o para el canal de datos
+
+109
+00:04:42,850 --> 00:04:43,893
+de tu empresa.
+
+110
+00:04:43,893 --> 00:04:45,100
+En cierto momento, deberías
+
+111
+00:04:45,100 --> 00:04:48,850
+preguntarte, ¿quién creó este paquete?
+
+112
+00:04:48,850 --> 00:04:50,140
+¿Qué experiencia tiene?
+
+113
+00:04:50,140 --> 00:04:51,550
+¿Se trata de un experto?
+
+114
+00:04:51,550 --> 00:04:53,440
+¿Qué otras cosas ha creado?
+
+115
+00:04:53,440 --> 00:04:55,760
+¿Cómo puedo fiarme de que los
+resultados sean correctos?
+
+116
+00:04:55,760 --> 00:04:58,450
+¿Ha habido reseñas profesionales
+o publicaciones científicas
+
+117
+00:04:58,450 --> 00:05:00,580
+que acompañen al paquete?
+
+118
+00:05:00,580 --> 00:05:01,690
+¿Es fiable?
+
+119
+00:05:01,690 --> 00:05:03,430
+¿Se somete a muchas pruebas?
+
+120
+00:05:03,430 --> 00:05:05,020
+Porque, si funciona para un ejemplo,
+
+121
+00:05:05,020 --> 00:05:08,240
+no significa que siempre vaya a funcionar.
+
+122
+00:05:08,240 --> 00:05:10,520
+¿Qué pasa si tienes
+preguntas sobre el software?
+
+123
+00:05:10,520 --> 00:05:12,050
+¿Y si encuentras un bug?
+
+124
+00:05:12,050 --> 00:05:15,140
+¿El mantenedor estará a tu
+disposición para ayudarte?
+
+125
+00:05:15,140 --> 00:05:17,660
+¿El producto está en desarrollo activo?
+
+126
+00:05:17,660 --> 00:05:20,480
+¿Qué expectativas de mantenimiento tiene?
+
+127
+00:05:20,480 --> 00:05:23,270
+¿Seguirá existiendo el
+paquete dentro de tres años,
+
+128
+00:05:23,270 --> 00:05:25,730
+cuando planeas acabar la tesis?
+
+129
+00:05:25,730 --> 00:05:27,800
+¿Quién más utiliza este software?
+
+130
+00:05:27,800 --> 00:05:30,260
+¿Es un proyecto establecido?
+
+131
+00:05:30,260 --> 00:05:31,940
+¿Existe una comunidad amplia
+
+132
+00:05:31,940 --> 00:05:35,070
+donde hacer preguntas?
+
+133
+00:05:35,070 --> 00:05:36,800
+Lo que no quieres es
+
+134
+00:05:36,800 --> 00:05:39,050
+volverte dependiente de un software
+
+135
+00:05:39,050 --> 00:05:41,420
+en tu investigación o en tu empresa.
+
+136
+00:05:41,420 --> 00:05:43,850
+Y que, en algún momento,
+aparezca un problema.
+
+137
+00:05:43,850 --> 00:05:45,830
+Que salga un bug muy malo.
+
+138
+00:05:45,830 --> 00:05:47,240
+Que se quede colgado.
+
+139
+00:05:47,240 --> 00:05:51,050
+O que dependa de otra
+cosa que ya no funcione.
+
+140
+00:05:51,050 --> 00:05:53,120
+O que no funcione en la última versión
+
+141
+00:05:53,120 --> 00:05:55,160
+de Windows o de Mac.
+
+142
+00:05:55,160 --> 00:05:58,130
+Y luego resulta que no
+tiene registro de problemas.
+
+143
+00:05:58,130 --> 00:06:00,050
+Y contactas a la persona que lo mantiene,
+
+144
+00:06:00,050 --> 00:06:01,970
+pero no te responde.
+
+145
+00:06:01,970 --> 00:06:04,880
+O peor, te responde
+como, "bueno, el paquete
+
+146
+00:06:04,880 --> 00:06:08,120
+es parte de un proyecto de
+investigación que ya no existe.
+
+147
+00:06:08,120 --> 00:06:11,030
+Y me he cambiado de universidad.
+
+148
+00:06:11,030 --> 00:06:13,450
+No tengo tiempo para trabajar en esto".
+
+149
+00:06:13,450 --> 00:06:15,090
+Sucede muy a menudo.
+
+150
+00:06:15,090 --> 00:06:16,760
+Yo he estado en esa situación.
+
+151
+00:06:16,760 --> 00:06:19,550
+Y es bueno recordar que
+el autor del paquete
+
+152
+00:06:19,550 --> 00:06:21,150
+no le debe nada a nadie.
+
+153
+00:06:21,150 --> 00:06:24,710
+La mayoría de mantenedores
+son amables y simpáticos.
+
+154
+00:06:24,710 --> 00:06:26,940
+Y están muy interesados en ayudarte,
+
+155
+00:06:26,940 --> 00:06:30,350
+y también en usar tu feedback
+para mejorar su paquete.
+
+156
+00:06:30,350 --> 00:06:32,930
+De eso se trata el
+software de código abierto.
+
+157
+00:06:32,930 --> 00:06:35,420
+Pero, a veces, te encuentras con que
+
+158
+00:06:35,420 --> 00:06:39,690
+un software que usabas quizás
+no esté en la mejor forma.
+
+159
+00:06:39,690 --> 00:06:41,330
+Creo que se trata muchas veces
+
+160
+00:06:41,330 --> 00:06:44,120
+del ciclo de vida particular
+del software de investigación.
+
+161
+00:06:44,120 --> 00:06:46,130
+Todo el software tiene un ciclo de vida.
+
+162
+00:06:46,130 --> 00:06:48,050
+Pero, para proyectos de código abierto,
+
+163
+00:06:48,050 --> 00:06:51,740
+es algo poco claro e impredecible.
+
+164
+00:06:51,740 --> 00:06:54,290
+La mayoría de proyectos
+comienzan como experimento.
+
+165
+00:06:54,290 --> 00:06:57,020
+Y luego, una pequeña
+parte de esos proyectos,
+
+166
+00:06:57,020 --> 00:06:59,450
+si funcionan y el mantenedor tiene tiempo
+
+167
+00:06:59,450 --> 00:07:02,060
+que invertir, pueden desarrollarse
+
+168
+00:07:02,060 --> 00:07:05,510
+en un software más maduro y establecido.
+
+169
+00:07:05,510 --> 00:07:10,070
+Al final, un día, todo
+software queda obsoleto.
+
+170
+00:07:10,070 --> 00:07:13,330
+Y se retira o se reemplaza con otra cosa.
+
+171
+00:07:13,330 --> 00:07:14,930
+Y en proyectos comerciales, hay
+
+172
+00:07:14,930 --> 00:07:18,560
+una licencia donde pone
+que se respalda el producto
+
+173
+00:07:18,560 --> 00:07:20,240
+durante al menos un año.
+
+174
+00:07:20,240 --> 00:07:21,230
+Blah, blah, blah, blah.
+
+175
+00:07:21,230 --> 00:07:24,200
+En proyectos de código
+abierto, eso no existe.
+
+176
+00:07:24,200 --> 00:07:29,200
+Se respalda durante el período de tiempo
+
+177
+00:07:29,990 --> 00:07:34,050
+que el autor tenga interés en mantenerlo.
+
+178
+00:07:34,050 --> 00:07:35,870
+Por ejemplo, mucho
+software de investigación
+
+179
+00:07:35,870 --> 00:07:37,820
+existe solamente como prueba de concepto
+
+180
+00:07:37,820 --> 00:07:40,707
+para una empresa o una
+publicación científica.
+
+181
+00:07:40,707 --> 00:07:42,290
+Una vez se ha publicado,
+
+182
+00:07:42,290 --> 00:07:44,180
+el autor no tiene intención
+
+183
+00:07:44,180 --> 00:07:46,020
+de volver a tocar el software.
+
+184
+00:07:46,020 --> 00:07:48,620
+Si quieres trabajar sobre ese software,
+
+185
+00:07:48,620 --> 00:07:51,320
+estás prácticamente solo.
+
+186
+00:07:51,320 --> 00:07:54,680
+Pero muchos paquetes R
+son justo lo contrario.
+
+187
+00:07:54,680 --> 00:07:57,680
+Y no se publican por su mérito científico.
+
+188
+00:07:57,680 --> 00:07:59,570
+Pero hacen algo muy útil.
+
+189
+00:07:59,570 --> 00:08:02,540
+Y al autor del paquete le interesa
+
+190
+00:08:02,540 --> 00:08:04,400
+conseguir tanta gente como pueda
+
+191
+00:08:04,400 --> 00:08:08,850
+para que lo use, y maximizar
+el impacto del trabajo.
+
+192
+00:08:08,850 --> 00:08:11,420
+Cuando usamos software de código abierto,
+
+193
+00:08:11,420 --> 00:08:15,350
+puede resultar de ayuda pensar sobre
+
+194
+00:08:15,350 --> 00:08:17,870
+el ciclo de vida del proyecto.
+
+195
+00:08:17,870 --> 00:08:20,960
+¿Se trata de un experimento
+o un proyecto maduro?
+
+196
+00:08:20,960 --> 00:08:23,090
+¿Sigue en desarrollo activo?
+
+197
+00:08:23,090 --> 00:08:25,350
+¿Ha quedado en el paso?
+
+198
+00:08:25,350 --> 00:08:27,388
+¿Cómo deberíamos gestionarlo?
+
+199
+00:08:27,388 --> 00:08:29,180
+¿En qué debemos fijarnos a la hora
+
+200
+00:08:29,180 --> 00:08:31,370
+de adquirir paquetes R?
+
+201
+00:08:31,370 --> 00:08:34,669
+¿Y qué indicadores nos revelan datos
+
+202
+00:08:34,669 --> 00:08:37,760
+sobre la salud del
+proyecto, o que te digan
+
+203
+00:08:37,760 --> 00:08:40,250
+qué cosas podemos esperar?
+
+204
+00:08:40,250 --> 00:08:43,650
+¿Cuáles son las señales
+de alarma a evitar?
+
+205
+00:08:43,650 --> 00:08:45,470
+Creo que podemos distinguir
+
+206
+00:08:45,470 --> 00:08:47,990
+tres categorías de indicadores.
+
+207
+00:08:47,990 --> 00:08:51,230
+La primera categoría de
+indicadores, son los técnicos.
+
+208
+00:08:51,230 --> 00:08:56,230
+Y son cosas que podemos
+medir de forma objetiva.
+
+209
+00:08:56,270 --> 00:08:59,120
+Por ejemplo, podemos buscar
+la red de dependencia.
+
+210
+00:08:59,120 --> 00:09:00,920
+La página de un paquete en CRAN
+
+211
+00:09:00,920 --> 00:09:03,715
+nos muestra la dependencia del paquete.
+
+212
+00:09:03,715 --> 00:09:05,090
+Estos son los paquetes
+
+213
+00:09:05,090 --> 00:09:06,990
+que dependen de tal paquete.
+
+214
+00:09:06,990 --> 00:09:09,830
+Esto nos da una idea de
+si otros desarrolladores
+
+215
+00:09:09,830 --> 00:09:12,200
+se fían de este paquete.
+
+216
+00:09:12,200 --> 00:09:15,153
+Pero contar el número de dependencias
+
+217
+00:09:15,153 --> 00:09:16,820
+no siempre nos revela
+la historia al completo.
+
+218
+00:09:16,820 --> 00:09:19,070
+Porque algunas de estas dependencias
+
+219
+00:09:19,070 --> 00:09:20,900
+son más importantes que otras.
+
+220
+00:09:20,900 --> 00:09:22,910
+O, a veces, el paquete
+
+221
+00:09:22,910 --> 00:09:26,870
+lo utilizan otros 10
+paquetes del mismo autor,
+
+222
+00:09:26,870 --> 00:09:29,360
+como pasa en citas científicas.
+
+223
+00:09:29,360 --> 00:09:32,000
+Una métrica alternativa que puedes usar
+
+224
+00:09:32,000 --> 00:09:36,290
+es contar las dependencias recursivas.
+
+225
+00:09:36,290 --> 00:09:38,900
+O comparar las dependencias en reverso
+
+226
+00:09:38,900 --> 00:09:41,220
+con su propia importancia relativa.
+
+227
+00:09:41,220 --> 00:09:44,270
+Digamos que tienes un ranking estadístico.
+
+228
+00:09:44,270 --> 00:09:47,300
+Y, además de las
+relaciones de dependencia,
+
+229
+00:09:47,300 --> 00:09:49,550
+otros indicadores técnicos a observar
+
+230
+00:09:49,550 --> 00:09:53,870
+son estadísticas de descarga
+o actividad del proyecto
+
+231
+00:09:53,870 --> 00:09:57,320
+en cuanto a actualizaciones o actividad.
+
+232
+00:09:57,320 --> 00:09:59,930
+Y me parece especialmente interesante
+
+233
+00:09:59,930 --> 00:10:03,540
+observar cómo cambian estos
+números con el tiempo.
+
+234
+00:10:03,540 --> 00:10:06,260
+Para tener una idea del
+ciclo de vida de un proyecto
+
+235
+00:10:06,260 --> 00:10:10,040
+y ver si el producto gana
+tracción, o si está a punto
+
+236
+00:10:10,040 --> 00:10:13,400
+de acabar, o si tiene un papel estable
+
+237
+00:10:13,400 --> 00:10:15,590
+dentro del ecosistema.
+
+238
+00:10:15,590 --> 00:10:17,170
+Veamos un ejemplo real
+
+239
+00:10:17,170 --> 00:10:18,260
+al que le tengo cariño.
+
+240
+00:10:18,260 --> 00:10:19,920
+Está en el paquete "Curl".
+
+241
+00:10:19,920 --> 00:10:21,380
+Necesitas un cliente de web en R,
+
+242
+00:10:21,380 --> 00:10:23,690
+algo que tenga ajustes de Curl.
+
+243
+00:10:23,690 --> 00:10:26,100
+Hay dos paquetes de CRAN que hacen esto.
+
+244
+00:10:26,100 --> 00:10:29,090
+Uno se llama Rcurl, y
+el otro se llama curl.
+
+245
+00:10:29,090 --> 00:10:31,220
+¿Cuál debería usar?
+
+246
+00:10:31,220 --> 00:10:32,690
+Si vamos a la página principal,
+
+247
+00:10:32,690 --> 00:10:34,560
+encontramos una descripción muy similar,
+
+248
+00:10:34,560 --> 00:10:38,010
+y un número similar de
+dependencias en reverso.
+
+249
+00:10:38,010 --> 00:10:40,570
+Y pasa lo mismo en R.
+
+250
+00:10:40,570 --> 00:10:43,920
+Si empezamos a mirar las
+dependencias recursivas,
+
+251
+00:10:43,920 --> 00:10:46,200
+vemos que la diferencia es mayor.
+
+252
+00:10:46,200 --> 00:10:48,600
+Y la razón es que el paquete "curl"
+
+253
+00:10:48,600 --> 00:10:52,590
+se usa como fundamento de una
+importante infraestructura
+
+254
+00:10:52,590 --> 00:10:54,900
+como es el paquete httr.
+
+255
+00:10:54,900 --> 00:10:58,290
+También, si vemos las dependencias
+en reverso en el tiempo,
+
+256
+00:10:58,290 --> 00:11:01,320
+observamos que el uso de
+curl aumenta de forma estable
+
+257
+00:11:01,320 --> 00:11:05,040
+durante los últimos años,
+mientras el uso del paquete
+
+258
+00:11:05,040 --> 00:11:07,950
+RCurl se ha mantenido parado.
+
+259
+00:11:07,950 --> 00:11:10,020
+Y podemos ver una tendencia similar
+
+260
+00:11:10,020 --> 00:11:12,360
+si observamos las estadísticas
+de descarga de los paquetes
+
+261
+00:11:12,360 --> 00:11:13,770
+durante los años.
+
+262
+00:11:13,770 --> 00:11:17,730
+La conclusión es que el
+paquete RCurl es muy antiguo.
+
+263
+00:11:17,730 --> 00:11:21,000
+Lleva en CRAN desde 2004,
+y existe una publicación
+
+264
+00:11:21,000 --> 00:11:22,590
+del 2006.
+
+265
+00:11:22,590 --> 00:11:25,750
+Era algo muy pionero en su momento.
+
+266
+00:11:25,750 --> 00:11:27,990
+Pero han cambiado muchas
+cosas desde entonces.
+
+267
+00:11:27,990 --> 00:11:31,080
+Y el paquete tiene problemas muy básicos.
+
+268
+00:11:31,080 --> 00:11:34,830
+El mantenedor de RCurl
+ya no está muy activo.
+
+269
+00:11:34,830 --> 00:11:37,560
+Escribimos el paquete
+curl, específicamente,
+
+270
+00:11:37,560 --> 00:11:40,680
+como reemplazo de RCurl
+con un diseño moderno,
+
+271
+00:11:40,680 --> 00:11:42,930
+más sencillo y más robusto.
+
+272
+00:11:42,930 --> 00:11:44,405
+Y funciona muy bien.
+
+273
+00:11:44,405 --> 00:11:45,780
+La mayoría de usuarios se han pasado
+
+274
+00:11:45,780 --> 00:11:48,420
+a este nuevo paquete desde entonces.
+
+275
+00:11:48,420 --> 00:11:51,300
+Pero el antiguo paquete RCurl sigue ahí.
+
+276
+00:11:51,300 --> 00:11:53,100
+Sin embargo, no está en buena form.a
+
+277
+00:11:53,100 --> 00:11:55,050
+Si lo usas hoy, rápidamente
+
+278
+00:11:55,050 --> 00:11:57,580
+te encontrarás con algunos problemas.
+
+279
+00:11:57,580 --> 00:12:00,570
+Y creo que es un ejemplo
+de cómo las métricas
+
+280
+00:12:00,570 --> 00:12:03,660
+te ayudan a tomar una decisión informada
+
+281
+00:12:03,660 --> 00:12:07,200
+y te ahorran un montón
+de problemas al final.
+
+282
+00:12:07,200 --> 00:12:11,760
+Por supuesto, las métricas
+técnicas no siempre funcionan.
+
+283
+00:12:11,760 --> 00:12:14,250
+Por ejemplo, muchos
+paquetes R son muy niche.
+
+284
+00:12:14,250 --> 00:12:17,460
+Y son solo útiles para un grupo
+
+285
+00:12:17,460 --> 00:12:19,120
+de gente muy particular y especializado.
+
+286
+00:12:19,120 --> 00:12:21,810
+Y el paquete no tiene muchas descargas
+
+287
+00:12:21,810 --> 00:12:23,470
+o dependencias en reverso.
+
+288
+00:12:23,470 --> 00:12:25,120
+Pero quizás sea algo en tu campo,
+
+289
+00:12:25,120 --> 00:12:27,300
+quizás sea justo lo que necesitas.
+
+290
+00:12:27,300 --> 00:12:30,210
+La segunda categoría de
+indicadores de la que quiero hablar
+
+291
+00:12:30,210 --> 00:12:31,750
+son los indicadores sociales.
+
+292
+00:12:31,750 --> 00:12:33,900
+Lo considero todas las cosas que tengan
+
+293
+00:12:33,900 --> 00:12:37,410
+que ver con la gente detrás del proyecto
+
+294
+00:12:37,410 --> 00:12:39,300
+y la forma en que se organiza
+
+295
+00:12:39,300 --> 00:12:41,730
+el desarrollo y la participación.
+
+296
+00:12:41,730 --> 00:12:44,070
+En mi experiencia son, de lejos,
+
+297
+00:12:44,070 --> 00:12:45,540
+las cosas más importantes en que fijarse
+
+298
+00:12:45,540 --> 00:12:48,580
+en un proyecto de código
+abierto saludable.
+
+299
+00:12:48,580 --> 00:12:50,550
+Pero no es fácil de cuantificar.
+
+300
+00:12:50,550 --> 00:12:52,440
+Al final se trata, muchas veces,
+
+301
+00:12:52,440 --> 00:12:54,840
+de conocer un poco a la comunidad.
+
+302
+00:12:54,840 --> 00:12:59,840
+Los proyectos de código
+abierto, para bien o para mal,
+
+303
+00:12:59,880 --> 00:13:02,670
+casi siempre los mantienen
+una o dos personas.
+
+304
+00:13:02,670 --> 00:13:06,630
+Hay un libro maravilloso de Nadia Eghbal
+
+305
+00:13:06,630 --> 00:13:08,700
+que salió a principios
+de año y me encanta,
+
+306
+00:13:08,700 --> 00:13:12,570
+y habla de la realidad tras el
+desarrollo de código abierto
+
+307
+00:13:12,570 --> 00:13:15,510
+y de por qué es así y sus consecuencias.
+
+308
+00:13:15,510 --> 00:13:17,820
+De nuevo, es una de
+las grandes diferencias
+
+309
+00:13:17,820 --> 00:13:19,090
+con el software comercial.
+
+310
+00:13:19,090 --> 00:13:22,680
+Mucha gente suele pensar que el software
+
+311
+00:13:22,680 --> 00:13:26,400
+lo escriben ingenieros
+anónimos de una gran empresa.
+
+312
+00:13:26,400 --> 00:13:29,310
+Y así no es como sucede con nosotros.
+
+313
+00:13:29,310 --> 00:13:32,850
+Este software lo escribe
+gente como tú y como yo.
+
+314
+00:13:32,850 --> 00:13:35,550
+Y deberías pensar en los paquetes R
+
+315
+00:13:35,550 --> 00:13:38,970
+más como una publicación
+científica o trabajo
+
+316
+00:13:38,970 --> 00:13:41,910
+de un artista local o un músico.
+
+317
+00:13:41,910 --> 00:13:45,390
+Sí que importa quién lo ha desarrollado.
+
+318
+00:13:45,390 --> 00:13:48,810
+El indicador social más importante es,
+
+319
+00:13:48,810 --> 00:13:51,450
+básicamente, ¿quién es el autor?
+
+320
+00:13:51,450 --> 00:13:54,330
+¿De qué organizaciones forma parte?
+
+321
+00:13:54,330 --> 00:13:58,500
+¿Con qué personas colabora a menudo?
+
+322
+00:13:58,500 --> 00:14:00,420
+¿Sigue activo o no?
+
+323
+00:14:00,420 --> 00:14:01,950
+¿En qué trabaja actualmente?
+
+324
+00:14:01,950 --> 00:14:03,480
+Basado en el tipo de paquete,
+
+325
+00:14:03,480 --> 00:14:06,480
+quizás quieras conocer
+su formación profesional.
+
+326
+00:14:06,480 --> 00:14:08,040
+Y si tienen presencia online
+
+327
+00:14:08,040 --> 00:14:10,210
+como un blog o redes sociales.
+
+328
+00:14:10,210 --> 00:14:12,360
+Otro indicador social es, básicamente,
+
+329
+00:14:12,360 --> 00:14:14,100
+¿cómo se gestiona el producto?
+
+330
+00:14:14,100 --> 00:14:16,650
+¿Existe un lugar público
+donde informar de bugs?
+
+331
+00:14:16,650 --> 00:14:18,510
+¿Se suelen solucionar estos normalmente?
+
+332
+00:14:18,510 --> 00:14:20,790
+Y si el producto está
+abierto a colaboraciones
+
+333
+00:14:20,790 --> 00:14:24,750
+de personas externas, ¿cómo
+se gestiona este proceso?
+
+334
+00:14:24,750 --> 00:14:26,280
+Para mí, es algo muy importante.
+
+335
+00:14:26,280 --> 00:14:27,930
+Creo que los paquetes R deberían tener
+
+336
+00:14:27,930 --> 00:14:31,740
+un lugar público donde la gente
+pueda enviar sus problemas.
+
+337
+00:14:31,740 --> 00:14:34,860
+Para ver los problemas que
+encuentran otros usuarios.
+
+338
+00:14:34,860 --> 00:14:37,255
+Y la gente pueda ayudarse mutuamente.
+
+339
+00:14:37,255 --> 00:14:38,880
+Quiero dejar claro que no deberías
+
+340
+00:14:38,880 --> 00:14:42,240
+esperar que todos los autores
+de paquetes R proporcionen
+
+341
+00:14:42,240 --> 00:14:43,080
+soporte completo.
+
+342
+00:14:43,080 --> 00:14:46,200
+Responder a todas estas
+preguntas y revisar sugerencias
+
+343
+00:14:46,200 --> 00:14:47,520
+puede ser muy laborioso.
+
+344
+00:14:47,520 --> 00:14:49,560
+A veces no tienes tiempo
+
+345
+00:14:49,560 --> 00:14:51,510
+de trabajar en un proyecto durante días,
+
+346
+00:14:51,510 --> 00:14:53,760
+o durante semanas o meses.
+
+347
+00:14:53,760 --> 00:14:57,540
+Para mí, lo importante
+es ser transparente.
+
+348
+00:14:57,540 --> 00:15:01,560
+Si no tengo forma de ver
+los problemas comunes
+
+349
+00:15:01,560 --> 00:15:06,480
+o las preguntas sobre el
+paquete, es una señal de alarma.
+
+350
+00:15:06,480 --> 00:15:09,040
+Puede haber excepciones.
+
+351
+00:15:09,040 --> 00:15:11,070
+Si los paquetes son relativamente pequeños
+
+352
+00:15:11,070 --> 00:15:13,350
+y los mantiene un profesor
+
+353
+00:15:13,350 --> 00:15:17,010
+que sea experto en la
+materia, puede estar bien.
+
+354
+00:15:17,010 --> 00:15:20,850
+Por norma general, creo que
+un registro de problemas
+
+355
+00:15:20,850 --> 00:15:24,000
+es el requisito mínimo para
+un proyecto de código abierto
+
+356
+00:15:24,000 --> 00:15:25,350
+saludable.
+
+357
+00:15:25,350 --> 00:15:28,230
+Finalmente, otro indicador
+social que podemos ver
+
+358
+00:15:28,230 --> 00:15:31,860
+son recursos disponibles para
+aprender sobre el paquete.
+
+359
+00:15:31,860 --> 00:15:34,560
+Por ejemplo, si existe buena documentación
+
+360
+00:15:34,560 --> 00:15:36,900
+tanto del paquete como del autor,
+
+361
+00:15:36,900 --> 00:15:39,720
+o de usuarios que escriban un blog.
+
+362
+00:15:39,720 --> 00:15:42,810
+También, por ejemplo, si
+hay preguntas resueltas
+
+363
+00:15:42,810 --> 00:15:45,690
+en Stack Overflow, puede
+ser una buena fuente
+
+364
+00:15:45,690 --> 00:15:48,090
+de información y señal
+de que otras personas
+
+365
+00:15:48,090 --> 00:15:50,580
+usan este paquete.
+
+366
+00:15:50,580 --> 00:15:52,830
+Y luego, la tercera
+categoría de indicadores.
+
+367
+00:15:52,830 --> 00:15:54,818
+Estos son quizás más específicos para R,
+
+368
+00:15:54,818 --> 00:15:56,610
+porque tenemos un
+software de investigación.
+
+369
+00:15:56,610 --> 00:15:59,860
+Y son los indicadores científicos.
+
+370
+00:15:59,860 --> 00:16:02,820
+Para paquetes que implementen
+de forma científica
+
+371
+00:16:02,820 --> 00:16:05,430
+o con método científico, te interesa
+
+372
+00:16:05,430 --> 00:16:08,430
+comprobar la validez de esos resultados.
+
+373
+00:16:08,430 --> 00:16:10,710
+Por ejemplo, si el paquete
+trabaja sobre un modelo,
+
+374
+00:16:10,710 --> 00:16:14,250
+debes asegurarte de que sus
+estimaciones sean precisas
+
+375
+00:16:14,250 --> 00:16:18,880
+y de que el paquete
+gestiona los casos extremos.
+
+376
+00:16:18,880 --> 00:16:21,750
+Esto es muy difícil de juzgar.
+
+377
+00:16:21,750 --> 00:16:23,710
+Pero hay algunas cosas que podemos usar.
+
+378
+00:16:23,710 --> 00:16:27,097
+Por ejemplo, hay paquetes
+que han pasado por un proceso
+
+379
+00:16:27,097 --> 00:16:28,043
+de revisión.
+
+380
+00:16:28,043 --> 00:16:32,100
+Por ejemplo, en el Journal of
+Cisco Software o en rOpenSci.
+
+381
+00:16:32,100 --> 00:16:33,110
+Eso es buena señal.
+
+382
+00:16:33,110 --> 00:16:34,860
+No es garantía de que el paquete
+
+383
+00:16:34,860 --> 00:16:36,610
+esté en buenas condiciones para siempre.
+
+384
+00:16:36,610 --> 00:16:39,000
+Pero, por lo menos, el autor
+
+385
+00:16:39,000 --> 00:16:42,210
+ha hecho el esfuerzo en algún
+momento de que un colega
+
+386
+00:16:42,210 --> 00:16:44,190
+le eche un vistazo crítico al código.
+
+387
+00:16:44,190 --> 00:16:48,750
+Por supuesto, podemos ver
+las citas de los paquetes
+
+388
+00:16:48,750 --> 00:16:51,060
+en publicaciones científicas.
+
+389
+00:16:51,060 --> 00:16:53,280
+Es muy complicado, porque
+muchos investigadores
+
+390
+00:16:53,280 --> 00:16:54,660
+no citan el software.
+
+391
+00:16:54,660 --> 00:16:56,790
+Y, si lo citan, seguramente solo citen
+
+392
+00:16:56,790 --> 00:17:01,110
+a R o Tidyverse y no los
+paquetes individuales.
+
+393
+00:17:01,110 --> 00:17:05,220
+Pero lo interesante es que
+muchas revistas científicas
+
+394
+00:17:05,220 --> 00:17:09,060
+comienzan ya a pedir que
+los investigadores incluyan
+
+395
+00:17:09,060 --> 00:17:11,730
+el código de análisis con su publicación
+
+396
+00:17:11,730 --> 00:17:13,800
+con propósitos de reproducibilidad.
+
+397
+00:17:13,800 --> 00:17:16,170
+Imagina que, si gran cantidad de código
+
+398
+00:17:16,170 --> 00:17:17,880
+pasa a estar disponible de este modo,
+
+399
+00:17:17,880 --> 00:17:20,730
+podemos analizar parte del código
+
+400
+00:17:20,730 --> 00:17:23,369
+para ver qué paquete de R se usa
+
+401
+00:17:23,369 --> 00:17:26,319
+normalmente en la
+investigación científica.
+
+402
+00:17:26,319 --> 00:17:30,270
+Creo que la calidad
+científica de los paquetes R
+
+403
+00:17:30,270 --> 00:17:35,270
+es, de lejos, la más difícil
+de juzgar, pero es importante.
+
+404
+00:17:35,597 --> 00:17:36,763
+Muy bien.
+
+405
+00:17:36,763 --> 00:17:38,535
+¿Por qué hablo de todo esto?
+
+406
+00:17:38,535 --> 00:17:42,300
+En rOpenSci, queremos ayudar
+a que los investigadores
+
+407
+00:17:42,300 --> 00:17:45,750
+aprovechen R. Hacemos
+selecciones, reorganizamos
+
+408
+00:17:45,750 --> 00:17:47,760
+revisiones de paquetes R.
+
+409
+00:17:47,760 --> 00:17:50,340
+Y proporcionamos
+infraestructura de desarrollo.
+
+410
+00:17:50,340 --> 00:17:53,670
+Hace poco, hemos estado sintiendo
+
+411
+00:17:53,670 --> 00:17:57,150
+la necesidad de mejores
+herramientas para monitorizar
+
+412
+00:17:57,150 --> 00:18:00,240
+la calidad de los paquetes R.
+
+413
+00:18:00,240 --> 00:18:03,520
+Tanto para proyectos internos
+
+414
+00:18:03,520 --> 00:18:07,080
+como para el ecosistema R en general,
+
+415
+00:18:07,080 --> 00:18:11,320
+para poder aconsejar mejor
+a los desarrolladores.
+
+416
+00:18:11,320 --> 00:18:14,580
+Estamos trabajando en un nuevo
+proyecto llamado R-universe.
+
+417
+00:18:14,580 --> 00:18:16,560
+Por una parte, R-universe es
+
+418
+00:18:16,560 --> 00:18:19,270
+una extensión de nuestra
+infraestructura interna.
+
+419
+00:18:19,270 --> 00:18:22,020
+En rOpenSci, tenemos un
+servidor de documentos
+
+420
+00:18:22,020 --> 00:18:24,540
+que construye paquetes y
+documentación automáticamente
+
+421
+00:18:24,540 --> 00:18:26,160
+para todos los paquetes R.
+
+422
+00:18:26,160 --> 00:18:28,020
+Y tenemos un servidor similar a CRAN, que
+
+423
+00:18:28,020 --> 00:18:29,910
+construye automáticamente
+los binarios para
+
+424
+00:18:29,910 --> 00:18:31,050
+todos nuestros paquetes.
+
+425
+00:18:31,050 --> 00:18:32,470
+Y funciona muy bien.
+
+426
+00:18:32,470 --> 00:18:35,070
+Con R-universe, queremos
+permitir que otras
+
+427
+00:18:35,070 --> 00:18:38,970
+organizaciones aprovechen
+estas mismas herramientas.
+
+428
+00:18:38,970 --> 00:18:41,820
+Queremos que R-universe no solo sea
+
+429
+00:18:41,820 --> 00:18:44,700
+un sistema de desarrollo, sino un lugar
+
+430
+00:18:44,700 --> 00:18:47,290
+donde aprender más sobre estos paquetes.
+
+431
+00:18:47,290 --> 00:18:50,070
+Queremos combinar los datos precisos
+
+432
+00:18:50,070 --> 00:18:52,170
+que obtienes en sistemas de desarrollo
+
+433
+00:18:52,170 --> 00:18:55,410
+con otras fuentes de
+información sobre autores
+
+434
+00:18:55,410 --> 00:18:58,740
+y actividad en el ciclo de
+vida y todas estas cosas
+
+435
+00:18:58,740 --> 00:19:00,323
+de las que hemos hablado.
+
+436
+00:19:00,323 --> 00:19:01,740
+Y tenemos otra cosa
+
+437
+00:19:01,740 --> 00:19:03,480
+para las métricas científicas.
+
+438
+00:19:03,480 --> 00:19:05,490
+Están desarrollando herramientas
+
+439
+00:19:05,490 --> 00:19:09,810
+que nos ayuden a encontrar
+citas y menciones a paquetes
+
+440
+00:19:09,810 --> 00:19:12,300
+en publicaciones científicas.
+
+441
+00:19:12,300 --> 00:19:15,190
+Además de mostrar información
+sobre un proyecto particular,
+
+442
+00:19:15,190 --> 00:19:18,510
+queremos ayudar a
+descubrir otros software.
+
+443
+00:19:18,510 --> 00:19:23,510
+Y haciendo referencias
+cruzadas con paquetes similares
+
+444
+00:19:24,040 --> 00:19:27,180
+del mismo autor u organización, quizás
+
+445
+00:19:27,180 --> 00:19:30,190
+podamos construir un
+sistema de recomendaciones.
+
+446
+00:19:30,190 --> 00:19:34,950
+Finalmente, queremos que
+sea un lugar que recalque
+
+447
+00:19:34,950 --> 00:19:39,120
+el impacto la importancia
+de un proyecto R,
+
+448
+00:19:39,120 --> 00:19:43,680
+para ayudar a que se reconozca
+a los autores de paquetes
+
+449
+00:19:43,680 --> 00:19:46,200
+por la investigación en software,
+
+450
+00:19:46,200 --> 00:19:48,750
+como sucede en publicaciones científicas.
+
+451
+00:19:48,750 --> 00:19:50,500
+Esta ha sido mi charla.
+
+452
+00:19:50,500 --> 00:19:51,700
+Muchas gracias por escucharme.
+
+453
+00:19:51,700 --> 00:19:54,480
+Espero que te haya hecho
+pensar un poco sobre el mundo
+
+454
+00:19:54,480 --> 00:19:57,270
+que hay tras el desarrollo
+de código abierto.
+
+455
+00:19:57,270 --> 00:19:59,670
+Y si te interesa el proyecto R-universe,
+
+456
+00:19:59,670 --> 00:20:04,020
+estate atento a nuestra
+web, r-universe.dev, donde
+
+457
+00:20:04,020 --> 00:20:06,870
+añadiremos más cosas en
+las que estamos trabajando
+
+458
+00:20:06,870 --> 00:20:09,050
+durante este año.
+

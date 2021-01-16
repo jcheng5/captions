@@ -1,0 +1,615 @@
+1
+00:00:06,367 --> 00:00:06,950
+MAYA GANS: Hi.
+
+2
+00:00:06,950 --> 00:00:08,360
+My name is Maya Gans.
+
+3
+00:00:08,360 --> 00:00:10,190
+And in this talk,
+I want to tell you
+
+4
+00:00:10,190 --> 00:00:13,950
+how to start your own
+virtual book club.
+
+5
+00:00:13,950 --> 00:00:18,810
+So this idea came to me in
+the beginning of lockdown.
+
+6
+00:00:18,810 --> 00:00:21,830
+I found myself
+feeling really alone.
+
+7
+00:00:21,830 --> 00:00:24,050
+And also, scrolling
+through Twitter,
+
+8
+00:00:24,050 --> 00:00:27,290
+I saw everyone taking on
+these new, exciting hobbies.
+
+9
+00:00:27,290 --> 00:00:29,330
+Like remember the time
+when there were so many
+
+10
+00:00:29,330 --> 00:00:30,980
+pictures of sourdough?
+
+11
+00:00:30,980 --> 00:00:32,870
+So I was looking
+at my bookshelf.
+
+12
+00:00:32,870 --> 00:00:35,600
+And I saw Advanced
+R. And I realized
+
+13
+00:00:35,600 --> 00:00:40,280
+that I use as a reference but
+I never read it cover to cover.
+
+14
+00:00:40,280 --> 00:00:43,340
+So I wanted to use the lockdown
+opportunity to do that.
+
+15
+00:00:43,340 --> 00:00:46,430
+And I found myself
+asking a lot of questions
+
+16
+00:00:46,430 --> 00:00:48,680
+that I didn't have
+the answers to.
+
+17
+00:00:48,680 --> 00:00:52,730
+So I reached out to Jon Harmon,
+the moderator of the R for Data
+
+18
+00:00:52,730 --> 00:00:54,440
+Science Slack channel.
+
+19
+00:00:54,440 --> 00:00:57,320
+And he allowed me
+to start a book club
+
+20
+00:00:57,320 --> 00:01:00,840
+channel within that Slack
+and to just see what happens.
+
+21
+00:01:00,840 --> 00:01:03,260
+And the results were magical.
+
+22
+00:01:03,260 --> 00:01:07,170
+12 of us ended up meeting weekly
+for the entirety of the book
+
+23
+00:01:07,170 --> 00:01:09,230
+so I think over the
+course of 25 weeks.
+
+24
+00:01:09,230 --> 00:01:11,360
+And we went from essentially
+a group of strangers
+
+25
+00:01:11,360 --> 00:01:14,840
+to now a group of
+really good friends.
+
+26
+00:01:14,840 --> 00:01:20,000
+So first, I want to talk
+about the cornerstones of why
+
+27
+00:01:20,000 --> 00:01:22,040
+I think that this worked.
+
+28
+00:01:22,040 --> 00:01:24,260
+And the reasons are twofold.
+
+29
+00:01:24,260 --> 00:01:28,820
+We created a microcosm within
+an already existing community.
+
+30
+00:01:28,820 --> 00:01:32,960
+So you might say there's already
+R Ladies or other chapters
+
+31
+00:01:32,960 --> 00:01:34,310
+and groups out there.
+
+32
+00:01:34,310 --> 00:01:35,540
+And that's true.
+
+33
+00:01:35,540 --> 00:01:39,950
+But that's thousands of
+faceless group members
+
+34
+00:01:39,950 --> 00:01:42,890
+who albeit are extremely
+helpful and inviting
+
+35
+00:01:42,890 --> 00:01:45,950
+whereas this group was 12 of us
+meeting on Zoom with the camera
+
+36
+00:01:45,950 --> 00:01:50,570
+on and really
+humanizing this learning
+
+37
+00:01:50,570 --> 00:01:52,260
+experience with each other.
+
+38
+00:01:52,260 --> 00:01:55,460
+The other component was that
+we made this as asynchronous
+
+39
+00:01:55,460 --> 00:01:57,050
+compatible as possible.
+
+40
+00:01:57,050 --> 00:02:00,900
+So each meeting was
+recorded and put on YouTube.
+
+41
+00:02:00,900 --> 00:02:03,680
+So if you couldn't attend,
+you can watch that.
+
+42
+00:02:03,680 --> 00:02:05,720
+But we also had this
+slack channel for people
+
+43
+00:02:05,720 --> 00:02:09,710
+to ask questions and even answer
+them whenever they get to them.
+
+44
+00:02:09,710 --> 00:02:11,870
+So you weren't really
+limited and locked down
+
+45
+00:02:11,870 --> 00:02:15,440
+to this single hour.
+
+46
+00:02:15,440 --> 00:02:20,680
+Now, the meetings themselves
+changed over time,
+
+47
+00:02:20,680 --> 00:02:22,050
+what we did with them.
+
+48
+00:02:22,050 --> 00:02:25,950
+In the beginning, we took
+the first 30 or so minutes
+
+49
+00:02:25,950 --> 00:02:28,570
+to review what we
+found in the chapter
+
+50
+00:02:28,570 --> 00:02:32,230
+and then used the rest of
+the time to answer questions.
+
+51
+00:02:32,230 --> 00:02:35,850
+But after a couple weeks,
+maybe around week eight
+
+52
+00:02:35,850 --> 00:02:38,910
+or so, I was getting kind
+of bored with this model.
+
+53
+00:02:38,910 --> 00:02:42,300
+And I wanted to
+make an application.
+
+54
+00:02:42,300 --> 00:02:47,130
+I made a Shiny app that uses
+the concepts within a chapter.
+
+55
+00:02:47,130 --> 00:02:51,630
+And granted, the Shiny app was
+super buggy, didn't even work.
+
+56
+00:02:51,630 --> 00:02:55,230
+But within the hour, we
+all debugged it together
+
+57
+00:02:55,230 --> 00:02:56,800
+and got it up and running.
+
+58
+00:02:56,800 --> 00:02:59,910
+And I think that was kind of
+a paradigm shift where people
+
+59
+00:02:59,910 --> 00:03:02,850
+started, rather than just
+relaying information,
+
+60
+00:03:02,850 --> 00:03:07,170
+they showed us their
+packages or other creations.
+
+61
+00:03:07,170 --> 00:03:11,430
+And it was incredibly
+inspiring and eye
+
+62
+00:03:11,430 --> 00:03:16,740
+opening to see how people are
+using these fundamentals just
+
+63
+00:03:16,740 --> 00:03:19,850
+in these chapters.
+
+64
+00:03:19,850 --> 00:03:22,790
+So now let's get
+to the secret sauce
+
+65
+00:03:22,790 --> 00:03:25,600
+of why I think this
+model worked, right?
+
+66
+00:03:25,600 --> 00:03:28,310
+We're not the first people
+to make a book club.
+
+67
+00:03:28,310 --> 00:03:30,990
+And I think it's
+because of two things.
+
+68
+00:03:30,990 --> 00:03:33,890
+One is that we
+have a facilitator
+
+69
+00:03:33,890 --> 00:03:35,270
+for each of our books.
+
+70
+00:03:35,270 --> 00:03:39,920
+And in this case, it was me who
+granted I'm pretty extroverted.
+
+71
+00:03:39,920 --> 00:03:42,290
+And I was totally fine
+pinging people on Slack
+
+72
+00:03:42,290 --> 00:03:44,360
+and being like, hey,
+it's Thursday night.
+
+73
+00:03:44,360 --> 00:03:45,620
+time to meet.
+
+74
+00:03:45,620 --> 00:03:48,050
+But you don't have
+to be that pushy.
+
+75
+00:03:48,050 --> 00:03:50,000
+Rather, the point
+of the facilitator
+
+76
+00:03:50,000 --> 00:03:52,610
+is that every week
+there is an agenda.
+
+77
+00:03:52,610 --> 00:03:56,420
+And if no one is able to
+give that presentation
+
+78
+00:03:56,420 --> 00:03:58,820
+for that week, then the
+onus is on the presenter
+
+79
+00:03:58,820 --> 00:04:00,260
+to take that upon themselves.
+
+80
+00:04:00,260 --> 00:04:05,000
+Or else the book might
+falter to the wayside.
+
+81
+00:04:05,000 --> 00:04:09,830
+The other component is
+collaborative infrastructure.
+
+82
+00:04:09,830 --> 00:04:12,560
+And for our case, we used GitHub.
+
+83
+00:04:12,560 --> 00:04:16,910
+And this image as well as the
+text before this are links.
+
+84
+00:04:16,910 --> 00:04:20,300
+So feel free to go
+out to our GitHub.
+
+85
+00:04:20,300 --> 00:04:23,370
+But our GitHub
+has three folders.
+
+86
+00:04:23,370 --> 00:04:28,520
+The first is our presentations
+so the actual Markdown
+
+87
+00:04:28,520 --> 00:04:30,570
+presentations from each week.
+
+88
+00:04:30,570 --> 00:04:35,660
+The second folder contains a
+breakdown of all the questions
+
+89
+00:04:35,660 --> 00:04:38,090
+and answers collated
+from the Slack channel
+
+90
+00:04:38,090 --> 00:04:40,190
+so that you don't have
+to sift through that.
+
+91
+00:04:40,190 --> 00:04:42,840
+And the last folder
+is a data folder.
+
+92
+00:04:42,840 --> 00:04:48,800
+And in this folder, we took
+that concept of applications
+
+93
+00:04:48,800 --> 00:04:52,700
+and took a data set and drilled
+down into it where each chapter
+
+94
+00:04:52,700 --> 00:04:58,390
+we applied that to this
+data set of our own.
+
+95
+00:04:58,390 --> 00:05:00,970
+Now to talk about side dishes.
+
+96
+00:05:00,970 --> 00:05:06,170
+So when we started this
+book club, at the outset,
+
+97
+00:05:06,170 --> 00:05:10,170
+the goal was essentially learn
+the contents of the chapters.
+
+98
+00:05:10,170 --> 00:05:14,400
+But we ended up learning all of
+these external things as well.
+
+99
+00:05:14,400 --> 00:05:18,140
+So I personally
+onboarded people onto how
+
+100
+00:05:18,140 --> 00:05:21,290
+to use GitHub in a
+collaborative sense
+
+101
+00:05:21,290 --> 00:05:23,700
+and collaborate on
+a single project.
+
+102
+00:05:23,700 --> 00:05:28,070
+We also learned a lot about
+R Markdown, HTML, and CSS.
+
+103
+00:05:28,070 --> 00:05:31,500
+And lastly, and maybe
+even most importantly,
+
+104
+00:05:31,500 --> 00:05:34,550
+we were still leveling up
+on our presentation skills
+
+105
+00:05:34,550 --> 00:05:38,930
+in these times where we're
+all isolated and alone.
+
+106
+00:05:38,930 --> 00:05:44,490
+So I want to leave you now
+with a recipe card essentially
+
+107
+00:05:44,490 --> 00:05:48,690
+to recreate this recipe
+that worked for us.
+
+108
+00:05:48,690 --> 00:05:54,480
+And the recipe here is kind of I
+break it down into seven steps.
+
+109
+00:05:54,480 --> 00:05:56,320
+The first is pick a book.
+
+110
+00:05:56,320 --> 00:05:58,370
+What book do you want to learn?
+
+111
+00:05:58,370 --> 00:06:01,490
+The second is find
+an online community
+
+112
+00:06:01,490 --> 00:06:05,640
+to make this as
+asynchronous as possible.
+
+113
+00:06:05,640 --> 00:06:09,380
+The third is to blast
+it on social media.
+
+114
+00:06:09,380 --> 00:06:14,390
+The fourth is some books
+have natural breaks that
+
+115
+00:06:14,390 --> 00:06:15,870
+might not be the chapters.
+
+116
+00:06:15,870 --> 00:06:18,470
+So you might chop
+them into segments
+
+117
+00:06:18,470 --> 00:06:25,430
+that are logical breaks, and
+then take a pulse on the group
+
+118
+00:06:25,430 --> 00:06:27,920
+and on yourself and
+see what's working
+
+119
+00:06:27,920 --> 00:06:30,350
+in that that precious hour
+that you're meeting together.
+
+120
+00:06:30,350 --> 00:06:32,600
+And don't be afraid
+to switch it up.
+
+121
+00:06:32,600 --> 00:06:37,460
+Then lastly, I think it was
+really awesome and fun that we
+
+122
+00:06:37,460 --> 00:06:39,860
+utilized applications
+of the chapter
+
+123
+00:06:39,860 --> 00:06:42,050
+rather than just
+keeping it theoretical.
+
+124
+00:06:42,050 --> 00:06:44,630
+And of course, in
+the end, have fun.
+
+125
+00:06:44,630 --> 00:06:47,810
+So there's a link to the Slack
+channel here because I would
+
+126
+00:06:47,810 --> 00:06:51,500
+really like if you are going to
+create a book club to just let
+
+127
+00:06:51,500 --> 00:06:53,690
+us know what works
+and what didn't.
+
+128
+00:06:53,690 --> 00:06:58,000
+And thank you so much for
+listening to this talk.
