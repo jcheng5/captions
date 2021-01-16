@@ -88,10 +88,6 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
       "-pix_fmt", "yuv420p",
       output_file
     ), echo_cmd = FALSE, echo = TRUE)
-    if (!identical(res$status, 0)) {
-      unlink(output_file)
-      stop("Rendering failed!")
-    }
     message("Wrote ", output_file)
   }, interrupt = function(e) {
     message("Interrupted, deleting output")
