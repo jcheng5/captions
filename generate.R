@@ -56,7 +56,7 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
     text_to_frame(df$text[i], file.path(captions_dir, paste0(df$n[i], ".png")))
   }
 
-  fps <- 1
+  fps <- 12
 
   message("  Linking")
   for (sec in 0:(duration - 1)) {
