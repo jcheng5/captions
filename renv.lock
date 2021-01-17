@@ -186,15 +186,10 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "0.4.7.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "rlang",
-      "RemoteUsername": "tidyverse",
-      "RemoteRef": "master",
-      "RemoteSha": "60c01510cc81a46be45b164e495ac8e11fe538e4",
-      "Hash": "0d627e37df9763cf96cfbd269a99a843"
+      "Version": "0.4.10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "599df23c40a4fce9c7b4764f28c37857"
     },
     "stringi": {
       "Package": "stringi",
