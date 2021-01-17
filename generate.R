@@ -1,7 +1,7 @@
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 library(stringr)
 library(progress)
-library(lubridate)
+library(lubridate, warn.conflicts = FALSE)
 
 source("_parse.R")
 source("_frame.R")
