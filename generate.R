@@ -57,7 +57,7 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
     text_to_frame(df$text[i], file.path(captions_dir, paste0(df$n[i], ".png")))
   }
 
-  fps <- 24
+  fps <- 1
 
   message("  Linking")
   for (sec in 0:(duration - 1)) {
@@ -82,18 +82,14 @@ generate_video <- function(srt_file, duration = "00:00", overwrite = "auto") {
   }
 
   message("  Rendering")
+
   tryCatch({
-    res <- processx::run("ffmpeg", c(
-      "-hide_banner", "-loglevel", "warning",       # Squelch output
-      "-nostats",                                   # Don't show progress
-      "-y",                                         # Don't prompt for overwrite
-      "-r", "24",                                   # Framerate
-      "-s", "1920x360",                             # Resolution
-      "-i", file.path(frames_dir, "frame%08d.png"), # Input file
-      "-vcodec", "libx264", "-crf", "25",           # Set codec and parameter
-      "-pix_fmt", "yuv420p",                        # Output pixel format
-      output_file
-    ), echo_cmd = FALSE, echo = TRUE)
+    av::av_encode_video(
+      input = dir(frames_dir, full.names = TRUE),
+      output = output_file,
+      framerate = fps,
+      verbose = FALSE
+    )
     message("Wrote ", output_file)
   }, interrupt = function(e) {
     message("Interrupted, deleting output")

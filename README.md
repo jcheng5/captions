@@ -1,7 +1,5 @@
 # Automatically generate caption videos from .srt files
 
-Requires `ffmpeg` to be installed and on the path. (On macOS, `brew install ffmpeg` should do it)
-
 1. Add .srt files to `data/` subdirectory.
 2. Run `make`.
     * This will give you an error about "durations table is not up-to-date". Edit data/000-durations.csv and change any 00:00 times to the duration (in mm:ss) of the original video.
