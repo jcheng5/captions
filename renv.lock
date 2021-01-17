@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://demo.rstudiopm.com/cran/latest"
+        "URL": "https://cloud.r-project.org"
       }
     ]
   },
@@ -177,6 +177,13 @@
       "Repository": "CRAN",
       "Hash": "97def703420c8ab10d8f0e6c72101e02"
     },
+    "ragg": {
+      "Package": "ragg",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "70bd921f54c3763f3dbec15106118828"
+    },
     "readr": {
       "Package": "readr",
       "Version": "1.4.0",
@@ -216,6 +223,20 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
+    },
+    "systemfonts": {
+      "Package": "systemfonts",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "046e821d454edb3722192f588f4d7884"
+    },
+    "textshaping": {
+      "Package": "textshaping",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "a34d4aa94ca91a52710b1c0c36bcded6"
     },
     "tibble": {
       "Package": "tibble",
